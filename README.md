@@ -1,5 +1,5 @@
-<h1 align="center">Hi 👋, I'm Nadir Bakhsh</h1>
-<h3 align="center">Passionate MERN Stack Developer from Pakistan</h3>
+<h1>Hi 👋, I'm Nadir Bakhsh</h1>
+<h3>Passionate MERN Stack Developer from Pakistan</h3>
 
 <h4>Programming Languages 🚀</h4>
 <p align="left">
