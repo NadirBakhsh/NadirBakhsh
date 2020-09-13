@@ -38,7 +38,7 @@
 </p>
 
 <p align="center">
-<a href="https://linkedin.com/in/https://www.linkedin.com/in/nadir-bakhsh-39807413a/" target="blank">
+<a href="https://www.linkedin.com/in/nadir-bakhsh-39807413a/" target="blank">
   <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="https://www.linkedin.com/in/nadir-bakhsh-39807413a/" height="40" width="40" />
   </a>
 <a href="https://www.facebook.com/nadir.bakhsh" target="blank">
