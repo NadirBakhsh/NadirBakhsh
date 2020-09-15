@@ -1,7 +1,7 @@
 <h1>Hi 👋, I'm Nadir Bakhsh</h1>
 <h3>Passionate about creating beautiful, modern and highly scalable web and mobile applications</h3>
 
-<h4>Programming Languages 🚀</h4>
+<h4>Programming Languages 🚀</h4> 
 <p align="left">
 <img src="https://devicons.github.io/devicon/devicon.git/icons/javascript/javascript-original.svg" alt="javascript" width="60" height="60"/>
 <img src="https://devicons.github.io/devicon/devicon.git/icons/typescript/typescript-original.svg" alt="typescript" width="60" height="60"/>
