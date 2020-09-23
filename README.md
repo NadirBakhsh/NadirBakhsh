@@ -47,4 +47,4 @@
 <a href="https://instagram.com/nadir_bakhsh_1" target="blank">
   <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="nadir_bakhsh_1" height="30" width="30" />
 </a>
-</p> 
+</p>
