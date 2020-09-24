@@ -1,5 +1,5 @@
 <h1>Hi 👋, I'm Nadir Bakhsh</h1>
-<h3>Passionate about creating beautiful, modern and highly scalable web and mobile applications</h3>
+<h3>Passionate about creating beautiful, modern and highly scalable web and mobile applications</h3>  
 
 <h4>Programming Languages 🚀</h4> 
 <p align="left">
