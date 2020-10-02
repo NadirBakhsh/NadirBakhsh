@@ -1,0 +1,11 @@
+:root{
+    --bg-color : #DCDCDC;
+}
+
+.App{
+    margin: 0px auto;
+    width: 100%;
+    max-width: 1400px;
+    height: 600px;
+    background-color: var(--bg-color);
+}

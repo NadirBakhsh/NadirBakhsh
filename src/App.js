@@ -1,9 +1,11 @@
 import React from 'react'
+import Header from './Components/Header/Header'
+import './css/app.css'
 
 function App () {
   return (
     <div className='App'>
-      <h1>Nadir</h1>
+      <Header />
     </div>
   )
 }
