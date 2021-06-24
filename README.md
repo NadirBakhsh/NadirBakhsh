@@ -1,1 +1,1 @@
-<img src='./assets/dis.png' width='100%'>
+<img src='./assets/dis.svg' width='100%'>
