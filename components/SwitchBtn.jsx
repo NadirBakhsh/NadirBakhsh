@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 const SwitchBtn = () => {
 	const [isMode, setIsMode] = useState(false)
@@ -17,7 +17,7 @@ const SwitchBtn = () => {
 		<div className='switch-btn'>
 			<span className='switch-btn-base'></span>
 			<button onClick={modeChange}>
-				{isMode ? <i class='fa fa-sun-o' aria-hidden='true'></i> : <i class='fa fa-moon-o' aria-hidden='true'></i>}
+				{isMode ? <i className='fa fa-sun-o' aria-hidden='true'></i> : <i className='fa fa-moon-o' aria-hidden='true'></i>}
 			</button>
 		</div>
 	)

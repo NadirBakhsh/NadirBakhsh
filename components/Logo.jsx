@@ -1,12 +1,9 @@
-import Link from 'next/link'
-import React from 'react'
-import { Poppins } from '@next/font/google'
+import { Nunito } from '@next/font/google'
 
-
-const poppins = Poppins({
-	weight: ['400', '500','700'], 
-	variable: '--font-poppins',
-	subsets: ['latin']
+const nunito = Nunito({
+	weight: ['400', '500', '700'],
+	className: '--font-nunito',
+	subsets: ['latin'],
 })
 
 const Logo = () => {
@@ -20,7 +17,7 @@ const Logo = () => {
 			</svg>
 			<span
 				onClick={() => window.open('https://legendary-stardust-d4ef3c.netlify.app/', '_blank')}
-				className={`text-[#03A9F4] hover:text-[#fff] text-2xl md:text-3xl italic underline transition-all cursor-pointer ${poppins.variable}`}>
+				className={`text-[#03A9F4] hover:text-[#fff] text-2xl md:text-3xl  underline font-medium transition-all cursor-pointer ${nunito.className}`}>
 				About Me
 			</span>
 		</div>
