@@ -1,7 +1,4 @@
 <!-- @format -->
-<h1 align="center">
-  <img src="https://github.com/NadirBakhsh/NadirBakhsh/blob/dev/name.svg" alt="Nadir Bakhsh" />
-</h1>
 
 <h1>Hello!<img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/></h1>
 <p>Welcome to my page! </br> </br> This is Nadir Bakhsh , currently working as a Software Engineer at Designocracy. I am a Full Stack developer with more than 3 years of experience in design, development, and support for web/mobile enterprise applications.</p>
