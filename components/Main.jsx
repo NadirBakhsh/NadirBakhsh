@@ -1,8 +1,11 @@
+import Card from "./Card"
 
 const Main = () => {
 
   return (
-    <main>Main</main>
+    <main className="p-6">
+      <Card />
+    </main>
   )
 }
 
