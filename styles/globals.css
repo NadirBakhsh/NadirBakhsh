@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+    --light-primary-color: #003147;
+    --dark-primary-color: #282626;
+
+    --light-secondary-color: #ADD8E6;
+    --dark-secondary-color: #454646;
+
+    --light-base-color: #848C90;
+    --dark-base-color: #312F2D;
+
+    --light-blue-color: #03A9F4;
+}
+
+header,
+main,
+footer {
+    width: 100%;
+}
+
+
+
+main {
+    flex: 1;
+    background-color: var(--light-secondary-color);
+    transition: all .2s;
+
+}
+
+main {
+    background-color: var(--light-secondary-color);
+}
+
+.dark main {
+    background-color: var(--dark-secondary-color);
+}
+
+header,
+footer {
+    background-color: var(--light-primary-color);
+    transition: all .2s;
+}
+
+.dark header,
+.dark footer {
+    background-color: var(--dark-primary-color);
+}
+
+.dark .switch-btn {
+    background-color: var(--dark-base-color);
+}
+
+.switch-btn {
+    width: 74px;
+    height: 38px;
+    border-radius: 32px;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-secondary-color);
+    position: relative !important;
+}
+
+
+.switch-btn-base {
+    width: 100%;
+    height: 14px;
+    border-radius: 10px;
+    background-color: var(--light-base-color);
+}
+
+.switch-btn button {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    border-radius: 18px;
+    left: 15px;
+    background-color: var(--light-blue-color);
+    transition: all .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dark .switch-btn button {
+    transform: translateX(22px);
+}
