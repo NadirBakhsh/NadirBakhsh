@@ -28,7 +28,7 @@ const Card = () => {
 						<h1 className={`text-[32px] lg:text-[40px] ${poppins.className} font-bold leading-[40px]`}>Nadir Bakhsh</h1>
 						<h2 className={`text-[18px] ${poppins.className} font-medium leading-8 `}>Software Engineer</h2>
 						<p className={`text-[14px] md:text-[14px] leading-[23px] mt-3 ${poppins.className}`}>
-							Hey there 👋 I'm an entrepreneur and software developer, I am focused on building <span className='font-semibold  tracking-wider'> leading page, Brand
+							Hey there 👋 {`I'm`} an entrepreneur and software developer, I am focused on building <span className='font-semibold  tracking-wider'> leading page, Brand
 							Identity, Web Application, Mobile Apps and software </span> for the start-ups or cooperative business companies.
 							Feel free to checkout my work via the links below or contact me with questions.
 						</p>
