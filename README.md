@@ -54,6 +54,13 @@
 <li>💬 Ping me about <strong>JavaScript, React, Node, and Serverless stuff</strong>.</li>
 </ul>
 
+
+<h2>⚡️ A Few Project listed here </h2>
+<ul>
+
+</ul>
+
+
 <h3>Where to find me</h3>
 <p>
   <a href="https://github.com/NadirBakhsh/NadirBakhsh" target="_blank"><img alt="Github" src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white" /></a> 
