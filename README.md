@@ -21,20 +21,19 @@ I'm Nadir Bakhsh, a passionate Software Engineer currently working at Designocra
 - Tailwind, SCSS, Less
 
 #### Javascript Lib
-1. [React Router](https://reactrouter.com/)
-2. [Redux](https://redux.js.org/)
-3. [Axios](https://axios-http.com/)
-4. [Styled-components](https://styled-components.com/)
-5. [Material-UI](https://mui.com/)
-6. [Formik](https://formik.org/)
-7. [React Query](https://react-query.tanstack.com/)
-8. [React-Bootstrap](https://react-bootstrap.github.io/)
-9. [Recoil](https://recoiljs.org/)
-10. [React Helmet](https://github.com/nfl/react-helmet)
-11. [Ant Design](https://ant.design/)
-12. [React Table](https://react-table.tanstack.com/)
-13. [React Hook Form](https://react-hook-form.com/)
-14. [SWR Hook](https://swr.vercel.app/)
+- [React Router](https://reactrouter.com/)
+- [Redux](https://redux.js.org/)
+- [Axios](https://axios-http.com/)
+- [Styled-components](https://styled-components.com/)
+- [Material-UI](https://mui.com/)
+- [Formik](https://formik.org/)
+- [React Query](https://react-query.tanstack.com/)
+- [React-Bootstrap](https://react-bootstrap.github.io/)
+- [Recoil](https://recoiljs.org/)
+- [Ant Design](https://ant.design/)
+- [React Table](https://react-table.tanstack.com/)
+- [React Hook Form](https://react-hook-form.com/)
+- [SWR Hook](https://swr.vercel.app/)
 
 #### Backend Stacks
 - Node.js and Express.js
