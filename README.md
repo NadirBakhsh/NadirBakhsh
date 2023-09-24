@@ -1,19 +1,49 @@
-<!-- @format -->
+<h1>Hello there! <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/></h1>
+<p>Welcome to my GitHub profile! 😎</p>
 
-<h1>Hello!<img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/></h1>
-<p>Welcome to my page! </br> </br> This is Nadir Bakhsh , currently working as a Software Engineer at Designocracy. I am a Full Stack developer with more than 3 years of experience in design, development, and support for web/mobile enterprise applications.</p>
-
-<h3>Technologies and Tools I code with</h3>
+I'm Nadir Bakhsh, a passionate Software Engineer currently working at Designocracy and Freelance. With over 5 years of experience in modren Stacks, I specialize in Full Stack development. My journey in the tech industry has been all about crafting web and mobile enterprise applications with a focus on design, development, and providing top-notch support.
 
 
-<h2>⚡️ A Few Quick Facts</h2>
-<ul>
-<li>🔭 I’m currently working with USA company <a href="https://pikky.io/">PIKKY</a>.</li>
-<li>👨‍💻 I’m currently working on an ecommerce project that using MERN Stack</li>
-<li>🧐 Learning about <strong>Serverless Architectures</strong>, <strong>distributed systems</strong>, and <strong>Blockchain</strong>.</li>
-<li>👨‍💻 Most of my projects are available on my <a href="https://github.com/NadirBakhsh/NadirBakhsh">Github</a>.</li>
-<li>💬 Ping me about <strong>JavaScript, React, Node, and Serverless stuff</strong>.</li>
-</ul>
+## What I Bring to the Table
+
+- 🚀 Innovative problem solver: I love tackling complex challenges and turning them into elegant solutions.
+- 💻 Full Stack expertise: From front-end design to back-end development, I've got it covered.
+- 🌐 Web and Mobile: I thrive in the dynamic world of web and mobile app development.
+- 🤝 Team player: Collaborating with diverse teams to achieve excellence is my forte.
+- 📚 Lifelong learner: I'm always hungry to learn and stay updated with the latest tech trends.
+
+## My top-notch stacks
+
+#### Frontend Stacks
+- HTML5, CSS3 and Javascript
+- Bootstrap, MUI and Ant-Design
+- React, React Native, Next.js
+- Tailwind, SCSS, Less
+
+#### Javascript Lib
+1. [React Router](https://reactrouter.com/)
+2. [Redux](https://redux.js.org/)
+3. [Axios](https://axios-http.com/)
+4. [Styled-components](https://styled-components.com/)
+5. [Material-UI](https://mui.com/)
+6. [Formik](https://formik.org/)
+7. [React Query](https://react-query.tanstack.com/)
+8. [React-Bootstrap](https://react-bootstrap.github.io/)
+9. [Recoil](https://recoiljs.org/)
+10. [React Helmet](https://github.com/nfl/react-helmet)
+11. [Ant Design](https://ant.design/)
+12. [React Table](https://react-table.tanstack.com/)
+13. [React Hook Form](https://react-hook-form.com/)
+14. [SWR Hook](https://swr.vercel.app/)
+
+#### Backend Stacks
+- Node.js and Express.js
+
+#### Database
+- Mongodb
+- Mysql
+
+
 
 
 ## A Few Project listed here
