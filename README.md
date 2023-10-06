@@ -46,6 +46,7 @@ I'm Nadir Bakhsh, a passionate Software Engineer currently working at Designocra
 
 
 ## A Few Project listed here
+- [mahaba.com - Apis & Frontend](https://mahaba-git-dev-mahaba.vercel.app/)
 - [nextthing.tech](https://invest.nextthing.tech/)
 - [aldi.us - Super Admin Dashboard](https://www.aldi.us)
 - [revrecap.co - Dashboard](https://www.revrecap.co/)
@@ -53,7 +54,6 @@ I'm Nadir Bakhsh, a passionate Software Engineer currently working at Designocra
 - [aobleaders.com - Landing Page](https://aobleaders.com/)
 - [pluckyfilms.com - Landing Page](https://www.pluckyfilms.com/)
 - [socaltoken.io - DAPP Frontend](https://www.socaltoken.io/market-place)
-- [mahaba.com - Apis & Frontend](https://mahaba-git-dev-mahaba.vercel.app/)
 - [About Me and Basic Projects](https://nadir-bakhsh-7xxz9zrkx-nadirbakhsh.vercel.app/)
 
 
