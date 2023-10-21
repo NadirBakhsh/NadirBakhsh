@@ -43,8 +43,6 @@ I'm Nadir Bakhsh, a passionate Software Engineer currently working at Designocra
 - Mysql
 
 
-
-
 ## A Few Project listed here
 - [mahaba.com - Apis & Frontend](https://mahaba-git-dev-mahaba.vercel.app/)
 - [nextthing.tech](https://invest.nextthing.tech/)
@@ -55,7 +53,6 @@ I'm Nadir Bakhsh, a passionate Software Engineer currently working at Designocra
 - [pluckyfilms.com - Landing Page](https://www.pluckyfilms.com/)
 - [socaltoken.io - DAPP Frontend](https://www.socaltoken.io/market-place)
 - [About Me and Basic Projects](https://nadir-bakhsh-7xxz9zrkx-nadirbakhsh.vercel.app/)
-
 
 
 <h3>Where to find me</h3>
