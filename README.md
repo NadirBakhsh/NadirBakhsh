@@ -3,7 +3,6 @@
 
 I'm Nadir Bakhsh, a passionate Software Engineer currently working at Designocracy and Freelance. With over 5 years of experience in modren Stacks, I specialize in Full Stack development. My journey in the tech industry has been all about crafting web and mobile enterprise applications with a focus on design, development, and providing top-notch support.
 
-
 ## What I Bring to the Table
 
 - 🚀 Innovative problem solver: I love tackling complex challenges and turning them into elegant solutions.
