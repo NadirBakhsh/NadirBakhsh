@@ -41,7 +41,6 @@ I'm Nadir Bakhsh, a passionate Software Engineer currently working at Designocra
 - Mongodb
 - Mysql
 
-
 ## A Few Project listed here
 - [mahaba.com - Apis & Frontend](https://mahaba-git-dev-mahaba.vercel.app/)
 - [nextthing.tech](https://invest.nextthing.tech/)
