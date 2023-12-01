@@ -33,6 +33,7 @@ I'm Nadir Bakhsh, a passionate Software Engineer currently working at Designocra
 - [React Table](https://react-table.tanstack.com/)
 - [React Hook Form](https://react-hook-form.com/)
 - [SWR Hook](https://swr.vercel.app/)
+- [shadcn-ui](https://ui.shadcn.com/)
 
 #### Backend Stacks
 - Node.js and Express.js
