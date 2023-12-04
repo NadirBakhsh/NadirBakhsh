@@ -40,6 +40,7 @@ I'm Nadir Bakhsh, a passionate Software Engineer currently working at Designocra
 
 #### Database
 - Mongodb
+- Firebase
 - Mysql
 
 ## A Few Project listed here
