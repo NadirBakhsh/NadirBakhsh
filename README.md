@@ -54,7 +54,6 @@ I'm Nadir Bakhsh, a passionate Software Engineer currently working at Designocra
 - [socaltoken.io - DAPP Frontend](https://www.socaltoken.io/market-place)
 - [About Me and Basic Projects](https://nadir-bakhsh-7xxz9zrkx-nadirbakhsh.vercel.app/)
 
-
 <h3>Where to find me</h3>
 <p>
   <a href="https://github.com/NadirBakhsh/NadirBakhsh" target="_blank"><img alt="Github" src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white" /></a> 
