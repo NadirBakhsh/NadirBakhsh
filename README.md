@@ -51,7 +51,7 @@ I'm Nadir Bakhsh, a passionate Software Engineer currently working at Designocra
 - [pikky.io - Mobile App & Dashboard](https://www.pikky.io/)
 - [aobleaders.com - Landing Page](https://aobleaders.com/)
 - [pluckyfilms.com - Landing Page](https://www.pluckyfilms.com/)
-- [socaltoken.io - DAPP Frontend](https://www.socaltoken.io/market-place)
+- [socaltoken.io - DAPP Frontend](https://so-mteav2ec6-nadirbakhsh.vercel.app/)
 - [About Me and Basic Projects](https://nadir-bakhsh-7xxz9zrkx-nadirbakhsh.vercel.app/)
 
 <h3>Where to find me</h3>
