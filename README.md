@@ -1,5 +1,5 @@
 <h1>Hello there! <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/></h1>
-<p>Welcome to my GitHub profile! 😎</p>
+<p>Welcome to my GitHub profile! 😎</p> 
 
 I'm Nadir Bakhsh, a passionate Software Engineer currently working at Designocracy and Freelance. With over 5 years of experience in modren Stacks, I specialize in Full Stack development. My journey in the tech industry has been all about crafting web and mobile enterprise applications with a focus on design, development, and providing top-notch support.
 
