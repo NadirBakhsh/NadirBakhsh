@@ -62,4 +62,3 @@ I'm Nadir Bakhsh, a passionate Software Engineer currently working at Designocra
   <a href = "mailto: nadir4k2010@gmail.com"><img alt="Gmail" src="https://img.shields.io/badge/-Gmail-ea4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 </p>
 
-
