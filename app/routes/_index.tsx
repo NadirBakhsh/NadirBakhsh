@@ -1,5 +1,5 @@
 import type { MetaFunction } from '@remix-run/node'
-import { Button } from '~/components/ui/button'
+import Header from '~/components/ui/Header'
 
 export const meta: MetaFunction = () => {
 	return [
@@ -12,25 +12,12 @@ export default function Index() {
 	return (
 		<div className="relative">
 			{/* Header start */}
-			<header className="w-full flex items-center h-[80px] sticky top-0 z-50 bg-white">
-				<nav className="w-full flex items-center justify-between @container container mx-auto">
-					<div>Logo</div>
-					<ul className="flex items-center space-x-8">
-						<li>About Me</li>
-						<li>Skills</li>
-						<li>Project</li>
-						<li>Contact me</li>
-					</ul>
-					<div>
-						<Button>Resume</Button>
-					</div>
-				</nav>
-			</header>
+			<Header />
 
 			{/* Header end */}
 
 			{/* Hero Section start */}
-			<div className="hero h-screen bg-white"></div>
+			<div className="hero h-[calc(100vh_-_104px)] bg-black"></div>
 			{/* Hero Section end */}
 
 			{/* Skills Section start */}
