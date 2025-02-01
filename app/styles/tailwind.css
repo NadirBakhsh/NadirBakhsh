@@ -63,5 +63,9 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .link {
+    @apply hover:text-primary-neutral hover:underline cursor-pointer underline-offset-1;
+  }
 }
 
