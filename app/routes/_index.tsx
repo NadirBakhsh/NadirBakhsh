@@ -1,12 +1,12 @@
-import type { MetaFunction } from '@remix-run/node'
-import Header from '~/components/ui/Header'
+import type { MetaFunction } from "@remix-run/node";
+import Header from "~/components/ui/Header";
 
 export const meta: MetaFunction = () => {
 	return [
-		{ title: 'New Remix App' },
-		{ name: 'description', content: 'Welcome to Remix!' },
-	]
-}
+		{ title: "New Remix App" },
+		{ name: "description", content: "Welcome to Remix!" }
+	];
+};
 
 export default function Index() {
 	return (
@@ -17,7 +17,54 @@ export default function Index() {
 			{/* Header end */}
 
 			{/* Hero Section start */}
-			<div className="hero h-[calc(100vh_-_104px)] bg-black"></div>
+			<div className="w-full relative  h-auto">
+				<div className="container mx-auto flex items-center justify-between	 relative ">
+					<div />
+					<div className="absolute w-full md:w-1/2">
+						<h1 className="text-6xl flex flex-col space-y-4 tracking-tighter">
+							<div>
+								Hello I’m{" "}
+								<span className="text-black font-extrabold">Nadir Bux</span>
+							</div>
+							<div>
+								<span className="text-black  font-extrabold">
+									Frontend Developer
+								</span>
+							</div>
+							<div>
+								Open to <span className="text-black font-extrabold">Work</span>
+							</div>
+						</h1>
+						<p className="md:max-w-[580px] text-base mt-8 leading-6 text-zinc-500">
+							Hi, I’m Nadir Bux, a passionate Fullstack development and
+							specializing in Frontend development with responsive design, and
+							user-friendly web and Apps. With a strong background in{" "}
+							<strong>React, Remix, Next.js, Tailwind CSS</strong> and modern{" "}
+							<strong>JavaScript libraries</strong>, please feel free to{" "}
+							<i>connect with me and discuss your project.</i>
+						</p>
+					</div>
+
+					<img
+						alt="hero-laptop-image"
+						src="./asset/hero-laptop-image.svg"
+						className="w-8/12"
+					/>
+				</div>
+			</div>
+
+			{/* <div className="hero  justify-end container mx-auto bg-white flex   relative">
+				<img
+					alt="hero-laptop-image"
+					src="./asset/hero-laptop-image.svg"
+					className=""
+				/>
+				<div>
+					<h1>
+
+					</h1>
+				</div>
+			</div> */}
 			{/* Hero Section end */}
 
 			{/* Skills Section start */}
@@ -48,5 +95,5 @@ export default function Index() {
 			<div className="footer h-[100px] w-full bg-black">footer section</div>
 			{/* footer Section end */}
 		</div>
-	)
+	);
 }
