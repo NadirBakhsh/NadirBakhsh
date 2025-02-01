@@ -67,5 +67,10 @@
   .link {
     @apply hover:text-primary-neutral hover:underline cursor-pointer underline-offset-1;
   }
+
+  .social-media-link {
+    @apply h-16 w-16 border-black border-2 rounded-md flex items-center justify-center hover:bg-black hover:text-white;
+  }
+
 }
 
