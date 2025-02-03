@@ -89,10 +89,10 @@ export default function Index() {
 			{/* Skills Section start */}
 			<div className="skills h-auto bg-white w-full py-10  mt-16">
 				<div className="container mx-auto flex flex-col items-center mt-10">
-					<h1 className="text-5xl text-center">
+					<h2 className="text-5xl text-center">
 						{" "}
 						My <span className="font-extrabold">Skills</span>
-					</h1>
+					</h2>
 
 					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 my-10">
 						{Array.from({ length: 10 }).map((_, i) => (
@@ -111,41 +111,77 @@ export default function Index() {
 			{/* Experience Section start */}
 			<div className="Experience h-auto bg-black mt-6 pb-20">
 				<div className="container mx-auto ">
-
-				<h1 className="text-5xl text-center text-white py-20">
-					{" "}
-					My <span className="font-extrabold">Experience</span>
-				</h1>
-
+					<h2 className="text-5xl text-center text-white py-20">
+						{" "}
+						My <span className="font-extrabold">Experience</span>
+					</h2>
 
 					{Array.from({ length: 3 }).map((_, i) => (
-						<div key={i} className="text-white border-2 border-zinc-800 rounded-md p-6  hover:bg-zinc-800 mb-8">
+						<div
+							key={i}
+							className="text-white border-2 border-zinc-800 rounded-md p-6  hover:bg-zinc-800 mb-8"
+						>
 							<div className="card-hear flex justify-between">
 								<div className="space-x-5 font-semibold">
-								<span>G</span>
-								<span className="text-xl">
-									Lead Software Engineer at Google {i + 1}
-								</span>
+									<span>G</span>
+									<span className="text-xl">
+										Lead Software Engineer at Google {i + 1}
+									</span>
 								</div>
-								<span className="text-base">
-									Nov {2019 + i} - Present
-								</span>
+								<span className="text-base">Nov {2019 + i} - Present</span>
 							</div>
 							<p className="text-base mt-4 !font-light text-zinc-400">
-							As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.
+								As a Senior Software Engineer at Google, I played a pivotal role
+								in developing innovative solutions for Google's core search
+								algorithms. Collaborating with a dynamic team of engineers, I
+								contributed to the enhancement of search accuracy and
+								efficiency, optimizing user experiences for millions of users
+								worldwide.
 							</p>
 						</div>
 					))}
-
 				</div>
-
-				
-
 			</div>
 			{/* Experience Section end */}
 
 			{/* About Section start */}
-			<div className="About h-screen bg-white">About section</div>
+			<div className="About h-screen bg-white ">
+				<div className="container mx-auto flex my-32">
+					<div className="flex-1">
+						<img alt="about-me" src="./asset/about-me.svg" />
+					</div>
+
+					<div className="flex-1">
+						<h2 className="text-5xl text-left text-black ">
+							{" "}
+							About <span className="font-extrabold">Me</span>
+						</h2>
+						<p className="text-base mt-4 !font-light text-zinc-500 ">
+							I'm a passionate, self-proclaimed designer who specializes in full
+							stack development (React.js & Node.js). I am very enthusiastic
+							about bringing the technical and visual aspects of digital
+							products to life. User experience, pixel perfect design, and
+							writing clear, readable, highly performant code matters to me.
+							<br />
+							<br />
+							I began my journey as a web developer in 2015, and since then,
+							I've continued to grow and evolve as a developer, taking on new
+							challenges and learning the latest technologies along the way.
+							Now, in my early thirties, 7 years after starting my web
+							development journey, I'm building cutting-edge web applications
+							using modern technologies such as Next.js, TypeScript, Nestjs,
+							Tailwindcss, Supabase and much more.
+							<br />
+							<br />
+							When I'm not in full-on developer mode, you can find me hovering
+							around on twitter or on indie hacker, witnessing the journey of
+							early startups or enjoying some free time. You can follow me on
+							Twitter where I share tech-related bites and build in public, or
+							you can follow me on GitHub.
+						</p>
+					</div>
+				</div>
+			</div>
 			{/* About Section end */}
 
 			{/* Projects Section start */}
