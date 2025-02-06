@@ -223,7 +223,24 @@ export default function Index() {
 			{/* Projects Section end */}
 
 			{/* Testimonial Section start */}
-			<div className="Testimonial h-screen bg-white">Testimonial section</div>
+			<div className="Testimonial h-auto bg-white">
+				<div className="container mx-auto my-24 py-1">
+					<h2 className="text-5xl text-center text-black ">
+						{' '}
+						My <span className="font-extrabold text-center">Testimonial</span>
+					</h2>
+
+					<div className="grid grid-cols-3 gap-12 mt-20 h-[478px]">
+						{Array.from({ length: 3 }).map((_, i) => (
+							<div
+								key={i}
+								className="flex p-10 group hover:bg-black items-center flex-col text-base rounded-lg bg-white  shadow-md transition duration-300">
+								<div className="avatar h-20 w-20 border-2 border-black group-hover:border-white rounded-full"></div>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
 			{/* Testimonial Section end */}
 
 			{/* Contact Section start */}
