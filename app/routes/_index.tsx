@@ -1,8 +1,5 @@
 import type { MetaFunction } from '@remix-run/node'
-import { Link } from '@remix-run/react'
-import { Icons } from '~/components/icon'
 import AboutSection from '~/components/sections/AboutSection'
-import { Button } from '~/components/ui/Button'
 import ContactSection from '~/components/sections/ContactSection'
 import ExperienceSection from '~/components/sections/ExperienceSection'
 import Footer from '~/components/sections/Footer'

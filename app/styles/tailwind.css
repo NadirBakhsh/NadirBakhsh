@@ -72,5 +72,9 @@
     @apply h-16 w-16 border-black border-2 rounded-md flex items-center justify-center hover:bg-black hover:text-white;
   }
 
+  .social-media-link-sm {
+    @apply h-[56px] w-[56px] border-black border-2 rounded-md flex items-center justify-center hover:bg-black hover:text-white;
+  }
+
 }
 

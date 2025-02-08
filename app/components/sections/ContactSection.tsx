@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from '../ui/Button'
+import SocialMedia from '../ui/SocialMedia'
 
 interface Props {}
 
@@ -63,7 +64,10 @@ function ContactSection(props: Props) {
 								How can I help?*
 							</label>
 						</div>
-						<Button size="md">Get In Touch</Button>
+						<div className="flex gap-[14px]">
+							<Button size="md">Get In Touch</Button>
+							<SocialMedia size="sm" />
+						</div>
 					</form>
 				</div>
 

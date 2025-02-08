@@ -1,5 +1,4 @@
-import { Link } from '@remix-run/react'
-import { Icons } from '~/components/icon'
+import SocialMedia from '../ui/SocialMedia'
 
 interface Props {}
 
@@ -37,33 +36,8 @@ function HeroSection(props: Props) {
 					src="./asset/hero-laptop-image.svg"
 					className="w-8/12"
 				/>
-
 				<div className="absolute bottom-0 flex space-x-8 z-10 translate-y-8 ">
-					<Link to={''}>
-						<div className="social-media-link">
-							<Icons.Facebook />
-						</div>
-					</Link>
-					<Link to={''}>
-						<div className="social-media-link">
-							<Icons.Instagram />
-						</div>
-					</Link>
-					<Link to={''}>
-						<div className="social-media-link">
-							<Icons.LinkedIn />
-						</div>
-					</Link>
-					<Link to={''}>
-						<div className="social-media-link">
-							<Icons.Github />
-						</div>
-					</Link>
-					<Link to={''}>
-						<div className="social-media-link">
-							<Icons.RedRabbit />
-						</div>
-					</Link>
+					<SocialMedia />
 				</div>
 			</div>
 		</div>
