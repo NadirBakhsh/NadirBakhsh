@@ -1,4 +1,4 @@
-import { Button } from './button'
+import { Button } from '../ui/Button'
 import { Icons } from '../icon'
 
 interface Props {}
