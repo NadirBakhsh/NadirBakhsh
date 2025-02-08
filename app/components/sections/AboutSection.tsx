@@ -5,8 +5,8 @@ function AboutSection(props: Props) {
 
 	return (
 		<div className="About h-auto bg-white ">
-			<div className="container mx-auto flex my-32">
-				<div className="flex-1">
+			<div className="container mx-auto flex my-32 space-x-20">
+				<div className="">
 					<img alt="about-me" src="./asset/frame-1.png" />
 				</div>
 
