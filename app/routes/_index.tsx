@@ -1,6 +1,7 @@
 import type { MetaFunction } from '@remix-run/node'
 import { Link } from '@remix-run/react'
 import { Icons } from '~/components/icon'
+import { Button } from '~/components/ui/button'
 
 import Header from '~/components/ui/Header'
 
@@ -188,7 +189,7 @@ export default function Index() {
 						<div
 							key={i}
 							className="project card flex mt-16 h-[516px] gap-10 odd:flex-row-reverse relative">
-							<div className="flex-1 bg-red-200 rounded-xl"></div>
+							<div className="flex-1 bg-red-200 rounded-2xl"></div>
 							<div className="flex-1">
 								<h2 className="text-6xl font-bold text-white">{`0${i + 1}`}</h2>
 								<h3 className="text-white text-3xl font-semibold my-5">Project Name</h3>
@@ -234,8 +235,18 @@ export default function Index() {
 						{Array.from({ length: 3 }).map((_, i) => (
 							<div
 								key={i}
-								className="flex p-10 group hover:bg-black items-center flex-col text-base rounded-lg bg-white  shadow-md transition duration-300">
+								className="flex p-10 relative border group hover:bg-black items-center flex-col text-base rounded-2xl bg-white  shadow-md transition duration-300">
 								<div className="avatar h-20 w-20 border-2 border-black group-hover:border-white rounded-full"></div>
+								<p className="text-base text-primary-neutral pt-8 pb-4 text-center italic group-hover:text-white border-b-2 group-hover:border-white border-black">
+									I recently had to jump on 10+ different calls across eight different
+									countries to find the right owner.
+								</p>
+								<h5 className="text-lg text-black mt-10 group-hover:text-white font-semibold">
+									Flora sheen
+								</h5>
+								<p className="text-sm absolute bottom-10 text-black group-hover:text-white">
+									Designer
+								</p>
 							</div>
 						))}
 					</div>
@@ -244,11 +255,97 @@ export default function Index() {
 			{/* Testimonial Section end */}
 
 			{/* Contact Section start */}
-			<div className="Contact h-screen bg-white">Contact section</div>
+			<div className="Contact h-auto bg-white pb-40">
+				<div className="container mx-auto relative flex gap-40">
+					{/* Contact Form */}
+					<div className="max-w-[500px] mt-10 flex-1">
+						<form className="space-y-6">
+							<div className="relative">
+								<input
+									type="text"
+									id="name"
+									className="peer block h-12 w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-primary-neutral"
+									placeholder=" "
+								/>
+								<label
+									htmlFor="name"
+									className="absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral">
+									Your name
+								</label>
+							</div>
+							<div className="relative">
+								<input
+									type="email"
+									id="email"
+									className="peer block h-12 w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-ring-primary-neutral"
+									placeholder=" "
+								/>
+								<label
+									htmlFor="email"
+									className="absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral">
+									Email
+								</label>
+							</div>
+							<div className="relative">
+								<input
+									type="text"
+									id="website"
+									className="peer block h-12 w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-ring-primary-neutral"
+									placeholder=" "
+								/>
+								<label
+									htmlFor="website"
+									className="absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral">
+									Your website (If exists)
+								</label>
+							</div>
+							<div className="relative">
+								<textarea
+									id="message"
+									rows={4}
+									className="peer block  w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-ring-primary-neutral"
+									placeholder=" "></textarea>
+								<label
+									htmlFor="message"
+									className="absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral">
+									How can I help?*
+								</label>
+							</div>
+							<Button size="md">Get In Touch</Button>
+						</form>
+					</div>
+
+					<div className="flex-1 mt-10 max-w-[600px]">
+						<h2 className="text-5xl  text-black font-extrabold">Let’s talk for</h2>
+						<h2 className="text-5xl mt-3 text-black font-extrabold">
+							Something special
+						</h2>
+						<p className="text-base text-zinc-500 mt-3 ">
+							I seek to push the limits of creativity to create high-engaging,
+							user-friendly, and memorable interactive experiences.
+						</p>
+						<h2 className="text-3xl  text-black font-semibold mt-4">
+							Youremail@gmail.com
+						</h2>
+						<h2 className="text-3xl  text-black font-semibold mt-2">1234567890</h2>
+					</div>
+				</div>
+			</div>
 			{/* Contact Section end */}
 
 			{/*footer Section start */}
-			<div className="footer h-[100px] w-full bg-black">footer section</div>
+			<div className="footer py-6 w-full bg-black">
+				<div className="container mx-auto bg-black text-white items-center  flex justify-between">
+					<div>
+						<h1 className="text-2xl italic flex font-sans font-semibold space-x-3">
+							Nadir.B
+						</h1>
+					</div>
+					<div className="text-right font-md text-md">
+						<p>&copy; 2025 Nadir.B, All Rights Reserved</p>
+					</div>
+				</div>
+			</div>
 			{/* footer Section end */}
 		</div>
 	)
