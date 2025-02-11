@@ -11,24 +11,24 @@ import SkillSection from '~/components/sections/SkillSection'
 import TestimonialSection from '~/components/sections/TestimonialSection'
 
 export const meta: MetaFunction = () => {
-	return [
-		{ title: 'New Remix App' },
-		{ name: 'description', content: 'Welcome to Remix!' },
-	]
+  return [
+    { title: 'New Remix App' },
+    { name: 'description', content: 'Welcome to Remix!' },
+  ]
 }
 
 export default function Index() {
-	return (
-		<div className="relative">
-			<Header />
-			<HeroSection />
-			<SkillSection />
-			<ExperienceSection />
-			<AboutSection />
-			<ProjectsSection />
-			<TestimonialSection />
-			<ContactSection />
-			<Footer />
-		</div>
-	)
+  return (
+    <div className="relative">
+      <Header />
+      <HeroSection />
+      <SkillSection />
+      <ExperienceSection />
+      <AboutSection />
+      <ProjectsSection />
+      <TestimonialSection />
+      <ContactSection />
+      <Footer />
+    </div>
+  )
 }
