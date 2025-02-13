@@ -16,13 +16,12 @@ function Header(props: Props) {
 
   useEffect(() => {
     if (!asideOpen) {
-      let lastScrollY = window.scrollY
       const handleScroll = () => {
         const currentScrollPosition = window.scrollY
-        const isScrollingUp = previousScrollPosition > currentScrollPosition
-        const isScrolledToTop = currentScrollPosition < 10
-
-        setIsHeaderVisible(isScrollingUp || isScrolledToTop)
+        setIsHeaderVisible(
+          currentScrollPosition < 10 ||
+            currentScrollPosition < previousScrollPosition
+        )
         previousScrollPosition = currentScrollPosition
       }
 
