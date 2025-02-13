@@ -15,22 +15,29 @@ function Header(props: Props) {
   }
 
   useEffect(() => {
-    let lastScrollY = window.scrollY
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY
-      setIsHeaderVisible(lastScrollY > currentScrollY || currentScrollY < 10)
-      lastScrollY = currentScrollY
+    if (!asideOpen) {
+      let lastScrollY = window.scrollY
+      const handleScroll = () => {
+        const currentScrollPosition = window.scrollY
+        const isScrollingUp = previousScrollPosition > currentScrollPosition
+        const isScrolledToTop = currentScrollPosition < 10
+
+        setIsHeaderVisible(isScrollingUp || isScrolledToTop)
+        previousScrollPosition = currentScrollPosition
+      }
+
+      let previousScrollPosition = 0
+      window.addEventListener("scroll", handleScroll)
+      return () => {
+        window.removeEventListener("scroll", handleScroll)
+      }
     }
-    window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+  }, [asideOpen])
 
   return (
     <>
       <header
-        className={`md:flex hidden w-full items-center h-[104px] border-primary-neutral border-b  sticky top-0 z-50 bg-white transition-transform duration-300 ${
+        className={`md:flex hidden w-full items-center h-[84px] border-primary-neutral border-b  sticky top-0 z-50 bg-white transition-transform duration-300 ${
           isHeaderVisible ? "translate-y-0" : "-translate-y-full "
         }`}
       >
@@ -51,7 +58,7 @@ function Header(props: Props) {
         </span>
       </header>
       <aside
-        className={`fixed md:hidden h-screen w-1/2 md:w-1/5 pt-[84px] md:pt-[124px] bg-white top-0 right-0 z-40 px-5 shadow-lg transform transition-transform duration-300 ${
+        className={`fixed md:hidden h-screen w-1/2 md:w-1/5 pt-[84px] md:pt-[104px] bg-white top-0 right-0 z-40 px-5 shadow-lg transform transition-transform duration-300 ${
           asideOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
