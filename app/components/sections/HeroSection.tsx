@@ -6,7 +6,7 @@ function HeroSection(props: Props) {
   const {} = props
 
   return (
-    <div className="w-full relative  h-auto">
+    <div className="w-full relative mt-5 h-auto">
       <div className="container mx-auto flex items-center justify-between	 relative ">
         <div />
         <div className="absolute w-full md:w-1/2">
