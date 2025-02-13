@@ -19,7 +19,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="relative">
+    <div className="relative overflow-clip">
       <Header />
       <HeroSection />
       <SkillSection />
