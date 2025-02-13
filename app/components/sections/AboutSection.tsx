@@ -4,13 +4,13 @@ function AboutSection(props: Props) {
   const {} = props
 
   return (
-    <div className="About h-auto bg-white ">
-      <div className="container mx-auto flex my-32 space-x-20">
+    <div className="About h-auto bg-white px-5 md:px-0">
+      <div className="container mx-auto flex flex-col md:flex-row my-16 md:my-32 md:space-x-20">
         <div className="">
           <img alt="about-me" src="./asset/frame-1.png" />
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 mt-10 md:mt-0">
           <h2 className="text-5xl text-left text-black ">
             {' '}
             About <span className="font-extrabold">Me</span>
