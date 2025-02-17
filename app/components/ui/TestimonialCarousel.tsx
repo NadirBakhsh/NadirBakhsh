@@ -6,7 +6,7 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
+  CarouselPrevious
 } from "~/components/ui/carousel";
 import { cn } from "~/lib/utils";
 
@@ -40,7 +40,7 @@ export function TestimonialCarousel() {
       <Carousel
         setApi={setApi}
         opts={{
-          align: "start",
+          align: "start"
         }}
         className="w-full"
       >
