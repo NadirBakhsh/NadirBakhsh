@@ -1,4 +1,5 @@
 import React from 'react'
+import { TestimonialCarousel } from '../ui/TestimonialCarousel'
 
 interface Props {}
 
@@ -6,14 +7,17 @@ function TestimonialSection(props: Props) {
   const {} = props
 
   return (
-    <div className="Testimonial h-auto bg-white">
+    <div className="Testimonial h-auto bg-white px-5">
       <div className="container mx-auto my-24 py-1">
-        <h2 className="text-5xl text-center text-black ">
+        <h2 className="text-4xl sm:text-5xl text-center text-black ">
           {' '}
           My <span className="font-extrabold text-center">Testimonial</span>
         </h2>
+        <div className='container mx-auto h-[478px] mt-10 md:mt-20'>
+        <TestimonialCarousel />
+        </div>
 
-        <div className="grid grid-cols-3 gap-12 mt-20 h-[478px]">
+        {/* <div className="grid grid-cols-3 gap-12 mt-20 h-[478px]">
           {Array.from({ length: 3 }).map((_, i) => (
             <div
               key={i}
@@ -31,7 +35,7 @@ function TestimonialSection(props: Props) {
               </p>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   )

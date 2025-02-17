@@ -1,5 +1,5 @@
 import { Icons } from "../icon"
-import { Button } from "../ui/Button"
+import { Button } from "./AppButton"
 
 interface Props {}
 
