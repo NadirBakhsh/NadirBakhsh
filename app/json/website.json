@@ -1,0 +1,122 @@
+{
+  "Header": {
+    "logo": "Nadir.B",
+    "nav": [
+      {
+        "name": "Home",
+        "link": "#home"
+      },
+      {
+        "name": "Skills",
+        "link": "#skills"
+      },
+      {
+        "name": "About",
+        "link": "#about"
+      },
+      {
+        "name": "Projects",
+        "link": "#projects"
+      },
+      {
+        "name": "Contact",
+        "link": "#contact"
+      }
+    ],
+    "resume": {
+      "name": "Resume",
+      "link": "#resume"
+    }
+  },
+
+  "HeroSection": {
+    "wellcom": "Hello, I'm",
+    "name": "Nadir Bakhsh",
+    "role": "Fullstack Developer",
+    "catchy": "Open to Work",
+    "description": "Hi, I’m Nadir Bakhsh, a passionate Fullstack development and specializing in Frontend development with responsive design, and user-friendly web and Apps. With a strong background in React, Remix, Next.js, Tailwind CSS and modern JavaScript libraries, please feel free to connect with me and discuss your project."
+  },
+
+  "SkillSection": {
+    "title": "My Skills",
+    "skills": [
+      {
+        "name": "HTML & CSS",
+        "icon": ""
+      },
+      {
+        "name": "JavaScript",
+        "icon": ""
+      },
+      {
+        "name": "React",
+        "icon": ""
+      },
+      {
+        "name": "React Native",
+        "icon": ""
+      },
+      {
+        "name": "Next.js",
+        "icon": ""
+      },
+      {
+        "name": "Remix",
+        "icon": ""
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": ""
+      },
+      {
+        "name": "Git",
+        "icon": ""
+      },
+      {
+        "name": "Nest.js",
+        "icon": ""
+      }
+    ]
+  },
+
+  "ExperienceSection": {
+    "title": "My Experience",
+    "experiences": [
+      {
+        "company": "Now Posh - IT Department",
+        "role": "Senior Software Engineer",
+        "duration": "Jan 2024 - Present",
+        "describe": "",
+        "logo": ""
+      },
+      {
+        "company": "Designocracy",
+        "role": "Full Stack Engineer",
+        "duration": "Jan 2021 - Nov 2024",
+        "describe": "",
+        "logo": ""
+      },
+      {
+        "company": "Pikky",
+        "state": "USA",
+        "role": "Frontend Engineer",
+        "duration": "Jan 2023 - Nov 2024",
+        "describe": "",
+        "logo": ""
+      },
+      {
+        "company": "Expertizo - Pakistan",
+        "role": "Full-stack Developer",
+        "duration": "Feb 2020 - Jan 2021",
+        "describe": "",
+        "logo": ""
+      }
+    ]
+  },
+
+  "AboutSection": {},
+  "ProjectsSection": {},
+  "TestimonialSection": {},
+  "ContactSection": {},
+  "Footer": {}
+}
