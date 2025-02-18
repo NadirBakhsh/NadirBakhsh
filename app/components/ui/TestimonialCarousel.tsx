@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { Card, CardContent } from "~/components/ui/card";
+import { useEffect, useState } from "react"
 import {
   Carousel,
   CarouselApi,
@@ -7,45 +6,45 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious
-} from "~/components/ui/carousel";
-import { cn } from "~/lib/utils";
+} from "~/components/ui/carousel"
+import { cn } from "~/lib/utils"
 
 export function TestimonialCarousel() {
-  const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
+  const [count, setCount] = useState(0)
 
   useEffect(() => {
     if (!api) {
-      return;
+      return
     }
 
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
+    setCount(api.scrollSnapList().length)
+    setCurrent(api.selectedScrollSnap() + 1)
 
     api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1);
-    });
+      setCurrent(api.selectedScrollSnap() + 1)
+    })
 
     if (count > 3) {
       const interval = setInterval(() => {
-        api?.scrollNext();
-      }, 3000);
-      return () => clearInterval(interval);
+        api?.scrollNext()
+      }, 3000)
+      return () => clearInterval(interval)
     }
-  }, [api, count]);
+  }, [api, count])
 
   return (
     <div className="relative h-auto">
       <Carousel
         setApi={setApi}
         opts={{
-          align: "start"
+          align: "start",
         }}
         className="w-full"
       >
         <CarouselContent className="justify-center">
-          {Array.from({ length: 9 }).map((_, index) => (
+          {Array.from({ length: 3 }).map((_, index) => (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
               <div
                 key={index}
@@ -87,5 +86,5 @@ export function TestimonialCarousel() {
         </div>
       )}
     </div>
-  );
+  )
 }
