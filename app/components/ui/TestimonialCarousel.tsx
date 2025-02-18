@@ -39,7 +39,7 @@ export function TestimonialCarousel() {
       <Carousel
         setApi={setApi}
         opts={{
-          align: "start",
+          align: "start"
         }}
         className="w-full"
       >
