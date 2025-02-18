@@ -114,9 +114,32 @@
     ]
   },
 
-  "AboutSection": {},
+  "AboutSection": {
+    "title": "About Me",
+    "describition": ""
+
+  },
   "ProjectsSection": {},
   "TestimonialSection": {},
   "ContactSection": {},
   "Footer": {}
 }
+
+
+
+
+Who I Am
+
+Nadir Bakhsh, I am a dedicated full-stack developer with more than 7 years of expertise in creating modern web and mobile applications. I focused to developing efficient, scalable, and user-friendly Web & APP, particularly use technologies for frontend like React, Next.js, Remix, and React Native. My passion to create smooth digital experiences for Business who want growth in the world.
+
+What I Do
+
+ crafting high quality of web & APPs using JavaScript frameworks such as Next.js and React, along with backend solutions powered by Node.js and Nest.js. My skills also include working with databases like MongoDB, MySQL, PostgreSQL and Firebase. This ensures the solutions I develop are both resilient and scalable. Additionally, I have a strong proficiency in UI/UX design, utilizing frameworks like Tailwind CSS, Material-UI, and Ant Design to create interfaces.
+
+My Education and Experience
+
+completed high school education at Ataturk Public School and intermediate studies at Superior Science College. further enhanced my technical skills by  IT Diploma from SMIT, where I excelled with a top 10 result, reflecting my strong dedication to learning in the field of technology.
+
+Achievements and Aspirations
+
+I have received three time “Best Employee of the Month” awards at Designocracy, and At Posh I was promoted to Team Lead just two months after joining. My portfolio showcases successful projects like Mahaba, Aldi US Dashboard, and Pikky.io. In the future, My aim to continue advancing the fields of web and mobile development, adopting upcoming technologies, and providing outstanding digital solutions.
