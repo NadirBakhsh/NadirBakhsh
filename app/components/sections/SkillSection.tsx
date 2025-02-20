@@ -22,7 +22,7 @@ function SkillSection(props: Props) {
           {skills.map(({ name }) => (
             <div
               key={name}
-              className="h-[160px] flex-col md:h-[186px] text-black hover:text-white hover:bg-black text-xl font-semibold w-[161px] md:w-[186px] border-2 border-black rounded-md flex items-center justify-center "
+              className="h-[160px] cursor-pointer flex-col md:h-[186px] text-black hover:text-white hover:bg-black text-xl font-semibold w-[161px] md:w-[186px] border-2 border-black rounded-md flex items-center justify-center "
             >
               <p className="mt-4">{name}</p>
             </div>
