@@ -1,10 +1,11 @@
-import React from "react";
 import { TestimonialCarousel } from "../ui/TestimonialCarousel";
+import portfolioJson from '~/json/portfolio.json'
 
 interface Props {}
 
 function TestimonialSection(props: Props) {
   const {} = props;
+  const { TestimonialSection } = portfolioJson
 
   return (
     <div className="Testimonial h-auto bg-white px-5">

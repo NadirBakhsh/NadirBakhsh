@@ -38,11 +38,11 @@
   },
 
   "SkillSection": {
-    "title": "My Skills",
+    "title": "Skills",
     "skills": [
       {
         "name": "HTML & CSS",
-        "icon": ""
+        "Icon": "Aws"
       },
       {
         "name": "JavaScript",
@@ -75,6 +75,10 @@
       {
         "name": "Nest.js",
         "icon": ""
+      },
+      {
+        "name": "Nest.js",
+        "icon": ""
       }
     ]
   },
@@ -87,14 +91,16 @@
         "role": "Senior Software Engineer",
         "duration": "Jan 2024 - Present",
         "describe": "",
-        "logo": ""
+        "logo_whit": "",
+        "icon": ""
       },
       {
         "company": "Designocracy",
         "role": "Full Stack Engineer",
         "duration": "Jan 2021 - Nov 2024",
         "describe": "",
-        "logo": ""
+        "logo_whit": "",
+        "icon": ""
       },
       {
         "company": "Pikky",
@@ -102,14 +108,16 @@
         "role": "Frontend Engineer",
         "duration": "Jan 2023 - Nov 2024",
         "describe": "",
-        "logo": ""
+        "logo_whit": "",
+        "icon": ""
       },
       {
         "company": "Expertizo - Pakistan",
         "role": "Full-stack Developer",
         "duration": "Feb 2020 - Jan 2021",
         "describe": "",
-        "logo": ""
+        "logo_whit": "",
+        "icon": ""
       }
     ]
   },
@@ -136,7 +144,15 @@
     ]
   },
 
-  "ProjectsSection": {},
+  "ProjectsSection": {
+    "title": "My Projects",
+    "projects": [
+      {
+        "name": "ALDI E-COMMERCE DASHBOARD",
+        "describe": "This project is an enterprise web application designed for ALDI, incorporating both a customer-facing e-commerce platform and an internal business operations system. The system facilitates order processing, claims and invoicing, carrier routing, stock management, user administration, and returns"
+      }
+    ]
+  },
   "TestimonialSection": {},
   "ContactSection": {},
   "Footer": {}
