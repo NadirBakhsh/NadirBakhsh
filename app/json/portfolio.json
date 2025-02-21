@@ -41,44 +41,64 @@
     "title": "Skills",
     "skills": [
       {
-        "name": "HTML & CSS",
-        "Icon": "Aws"
+        "name": "Web Services",
+        "icon": "Aws"
       },
       {
-        "name": "JavaScript",
-        "icon": ""
+        "name": "Javascript",
+        "icon": "Javascript"
       },
       {
         "name": "React",
-        "icon": ""
-      },
-      {
-        "name": "React Native",
-        "icon": ""
+        "icon": "React"
       },
       {
         "name": "Next.js",
-        "icon": ""
+        "icon": "Next"
       },
       {
         "name": "Remix",
-        "icon": ""
+        "icon": "Remix"
       },
       {
         "name": "Tailwind CSS",
-        "icon": ""
+        "icon": "Tailwindcss"
       },
       {
         "name": "Git",
-        "icon": ""
+        "icon": "Git"
       },
       {
         "name": "Nest.js",
-        "icon": ""
+        "icon": "Nest"
       },
       {
-        "name": "Nest.js",
-        "icon": ""
+        "name": "Mongo DB",
+        "icon": "Mongodb"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "Typescript"
+      },
+      {
+        "name": "Storybook",
+        "icon": "Storybook"
+      },
+      {
+        "name": "Node JS",
+        "icon": "Node"
+      },
+      {
+        "name": "Redux",
+        "icon": "Redux"
+      },
+      {
+        "name": "Express",
+        "icon": "Express"
+      },
+      {
+        "name": "Database",
+        "icon": "Mysql"
       }
     ]
   },

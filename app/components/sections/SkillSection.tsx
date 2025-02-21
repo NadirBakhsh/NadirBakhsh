@@ -1,5 +1,5 @@
 import { Icons } from "../icon"
-import portfolioJson from "~/json/portfolio.json"
+import portfolioJson from "~/json/portfolio"
 
 interface Props {}
 
@@ -19,14 +19,18 @@ function SkillSection(props: Props) {
         </h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-6 md:gap-10 my-12">
-          {skills.map(({ name }) => (
+          {skills.map((item: any) => {
+            const SkillIcon = Icons[item?.icon] 
+          
+            return (
             <div
-              key={name}
-              className="h-[160px] cursor-pointer flex-col md:h-[186px] text-black hover:text-white hover:bg-black text-xl font-semibold w-[161px] md:w-[186px] border-2 border-black rounded-md flex items-center justify-center "
+              key={item?.name}
+              className="h-[160px] group cursor-pointer flex-col md:h-[186px] text-black hover:text-white hover:bg-black text-xl font-semibold w-[161px] md:w-[186px] border-2 border-black rounded-md flex items-center justify-center "
             >
-              <p className="mt-4">{name}</p>
+              {<SkillIcon />}
+              <p className="mt-4">{item?.name}</p>
             </div>
-          ))}
+          )})}
         </div>
       </div>
     </div>

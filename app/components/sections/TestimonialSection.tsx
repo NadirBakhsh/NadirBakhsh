@@ -1,5 +1,5 @@
 import { TestimonialCarousel } from "../ui/TestimonialCarousel";
-import portfolioJson from '~/json/portfolio.json'
+import portfolioJson from '~/json/portfolio'
 
 interface Props {}
 
