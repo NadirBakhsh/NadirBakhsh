@@ -41,12 +41,12 @@
     "title": "Skills",
     "skills": [
       {
-        "name": "Web Services",
-        "icon": "Aws"
-      },
-      {
         "name": "Javascript",
         "icon": "Javascript"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "Typescript"
       },
       {
         "name": "React",
@@ -65,20 +65,8 @@
         "icon": "Tailwindcss"
       },
       {
-        "name": "Git",
-        "icon": "Git"
-      },
-      {
-        "name": "Nest.js",
-        "icon": "Nest"
-      },
-      {
-        "name": "Mongo DB",
-        "icon": "Mongodb"
-      },
-      {
-        "name": "TypeScript",
-        "icon": "Typescript"
+        "name": "Redux",
+        "icon": "Redux"
       },
       {
         "name": "Storybook",
@@ -89,16 +77,28 @@
         "icon": "Node"
       },
       {
-        "name": "Redux",
-        "icon": "Redux"
-      },
-      {
         "name": "Express",
         "icon": "Express"
       },
       {
+        "name": "Nest.js",
+        "icon": "Nest"
+      },
+      {
+        "name": "Mongo DB",
+        "icon": "Mongodb"
+      },
+      {
         "name": "Database",
-        "icon": "Mysql"
+        "icon": "Database"
+      },
+      {
+        "name": "Web Services",
+        "icon": "Aws"
+      },
+      {
+        "name": "Git",
+        "icon": "Git"
       }
     ]
   },
