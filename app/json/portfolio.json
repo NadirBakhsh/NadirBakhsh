@@ -104,40 +104,52 @@
   },
 
   "ExperienceSection": {
-    "title": "My Experience",
+    "title": "Experience",
     "experiences": [
       {
         "company": "Now Posh - IT Department",
+        "type": "Full Time",
+        "country": "Pakistan",
         "role": "Senior Software Engineer",
         "duration": "Jan 2024 - Present",
-        "describe": "",
-        "logo_whit": "",
-        "icon": ""
+        "describe": "At Now Posh, I worked as a Full Stack Developer and Team Lead, overseeing both frontend and backend development. I led a team of developers, maintained code quality, and optimized workflows for efficient project execution. My role involved building scalable web applications, implementing secure authentication, and integrating RESTful APIs for smooth data exchange. Leveraging React.js, Next.js, and Node.js, I developed high-performance, user-friendly interfaces. Additionally, I conducted code reviews and mentorship sessions, fostering a strong development culture. My contributions enhanced project efficiency, improved application reliability, and accelerated delivery timelines",
+        "logoUrl": "./companies-logo/posh_logo.png"
       },
       {
         "company": "Designocracy",
+        "type": "Full Time",
+        "country": "Pakistan",
         "role": "Full Stack Engineer",
         "duration": "Jan 2021 - Nov 2024",
-        "describe": "",
-        "logo_whit": "",
-        "icon": ""
+        "describe": "At Designocracy, I worked as a Full Stack Engineer, contributing to both frontend and backend development. My role involved translating design files (Figma, XD, PSD) into fully functional and responsive web applications. I collaborated closely with the backend team to design REST API data schemas and integrate APIs seamlessly into the frontend. With expertise in Node.js, MEAN Stack, and modern web technologies, I developed scalable solutions that enhanced user experience and performance. Additionally, I played a key role in optimizing UI components, improving application efficiency, and ensuring smooth project execution from concept to deployment.",
+        "logoUrl": "./companies-logo/designocracy_logo.jpg"
+      },
+      {
+        "company": "Upwork",
+        "type": "Remote - Part Time",
+        "country": "Pakistan",
+        "role": "Frontend Engineer",
+        "duration": "Jan 2019 - Present",
+        "describe": " work as a part-time freelancer on Upwork, specializing in frontend development with a strong focus on React.js, Next.js, and modern UI frameworks. I have successfully delivered multiple projects with top ratings, ensuring high-quality, scalable, and user-friendly applications. My expertise includes crafting responsive interfaces, optimizing performance, and implementing secure API integrations for seamless user experiences. By following best coding practices, I ensure clean, maintainable, and efficient code. I also contribute to development workflows through code reviews and mentorship. My dedication to client satisfaction and attention to detail help me deliver reliable and high-performing solutions.",
+        "logoUrl": "./companies-logo/pikky_logo.jpg"
       },
       {
         "company": "Pikky",
-        "state": "USA",
+        "country": "USA",
+        "type": "Full Time",
         "role": "Frontend Engineer",
         "duration": "Jan 2023 - Nov 2024",
-        "describe": "",
-        "logo_whit": "",
-        "icon": ""
+        "describe": "For Pikky, I developed both the Restaurant Dashboard and the Mobile Application, ensuring a seamless experience for restaurant owners and customers. The Restaurant Dashboard was built using React.js, providing intuitive order management, analytics, and real-time updates. The Mobile App, developed with React Native, offered a user-friendly interface for placing orders, tracking deliveries, and making secure payments. I implemented authentication and API integrations, ensuring data security and smooth communication between the frontend and backend. Leading code reviews, I maintained high coding standards and optimized performance. Additionally, I mentored junior developers, improving team efficiency and overall project quality.",
+        "logoUrl": "./companies-logo/pikky_logo.jpg"
       },
       {
-        "company": "Expertizo - Pakistan",
+        "company": "Expertizo",
+        "type": "Full Time",
+        "country": "Pakistan",
         "role": "Full-stack Developer",
         "duration": "Feb 2020 - Jan 2021",
-        "describe": "",
-        "logo_whit": "",
-        "icon": ""
+        "describe": "I developed and maintained scalable React applications, ensuring high performance and efficiency. My role involved implementing robust authentication mechanisms to enhance security. I integrated various APIs seamlessly, optimizing data flow and user experience. Leading code reviews, I provided constructive feedback to improve code quality. I also mentored junior developers, fostering a culture of continuous learning. These efforts streamlined development workflows and boosted overall team productivity.",
+        "logoUrl": "./companies-logo/expertizo_logo.jpg"
       }
     ]
   },
