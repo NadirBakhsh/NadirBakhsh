@@ -121,7 +121,7 @@
         "country": "Pakistan",
         "role": "Full Stack Engineer",
         "duration": "Jan 2021 - Nov 2024",
-        "describe": "At Designocracy, I worked as a Full Stack Engineer, contributing to both frontend and backend development. My role involved translating design files (Figma, XD, PSD) into fully functional and responsive web applications. I collaborated closely with the backend team to design REST API data schemas and integrate APIs seamlessly into the frontend. With expertise in Node.js, MEAN Stack, and modern web technologies, I developed scalable solutions that enhanced user experience and performance. Additionally, I played a key role in optimizing UI components, improving application efficiency, and ensuring smooth project execution from concept to deployment.",
+        "describe": "At Designocracy, I began as a Frontend UI Developer, focusing on creating responsive and user-friendly interfaces while integrating APIs to enhance functionality. My expertise in React.js, Next.js, and modern UI frameworks contributed to streamlined development and improved user experience. Recognizing my contributions, I was promoted to Full Stack Engineer, where I collaborated with backend teams to design REST API data schemas and integrate them into the frontend. Over time, I played a key role in optimizing performance, ensuring scalability, and maintaining high code standards. Later, I advanced to a Part-Time Full Stack Engineer, continuing to build scalable web solutions while mentoring junior developers and conducting code reviews to enhance overall project quality.",
         "logoUrl": "./companies-logo/designocracy_logo.jpg"
       },
       {
@@ -131,7 +131,7 @@
         "role": "Frontend Engineer",
         "duration": "Jan 2019 - Present",
         "describe": " work as a part-time freelancer on Upwork, specializing in frontend development with a strong focus on React.js, Next.js, and modern UI frameworks. I have successfully delivered multiple projects with top ratings, ensuring high-quality, scalable, and user-friendly applications. My expertise includes crafting responsive interfaces, optimizing performance, and implementing secure API integrations for seamless user experiences. By following best coding practices, I ensure clean, maintainable, and efficient code. I also contribute to development workflows through code reviews and mentorship. My dedication to client satisfaction and attention to detail help me deliver reliable and high-performing solutions.",
-        "logoUrl": "./companies-logo/pikky_logo.jpg"
+        "logoUrl": "./companies-logo/upwork_logo.jpg"
       },
       {
         "company": "Pikky",
