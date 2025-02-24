@@ -37,6 +37,34 @@
     "description": "Hi, I’m Nadir Bakhsh, a passionate Fullstack development and specializing in Frontend development with responsive design, and user-friendly web and Apps. With a strong background in React, Remix, Next.js, Tailwind CSS and modern JavaScript libraries, please feel free to connect with me and discuss your project."
   },
 
+  "SocialMediaLinks": [
+    {
+      "title": "Github",
+      "icon": "Github",
+      "url": "https://github.com/NadirBakhsh"
+    },
+    {
+      "title": "Linkedin",
+      "icon": "LinkedIn",
+      "url": "https://www.linkedin.com/in/nadir-bakhsh-39807413a/"
+    },
+    {
+      "title": "Instagram",
+      "icon": "Instagram",
+      "url": "https://www.instagram.com/nadir_bakhsh_1/"
+    },
+    {
+      "title": "Facebook",
+      "icon": "Facebook",
+      "url": "https://www.facebook.com/nadir.bakhsh"
+    },
+    {
+      "title": "Tweeter - X",
+      "icon": "XLogo",
+      "url": "https://twitter.com/NadirBatti"
+    }
+  ],
+
   "SkillSection": {
     "title": "Skills",
     "skills": [
@@ -185,6 +213,7 @@
       }
     ]
   },
+
   "TestimonialSection": {},
   "ContactSection": {},
   "Footer": {}
