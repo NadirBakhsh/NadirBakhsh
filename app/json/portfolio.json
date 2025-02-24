@@ -183,8 +183,8 @@
   },
 
   "AboutSection": {
-    "title": "About Me",
-    "describition": [
+    "title": "About",
+    "bio": [
       {
         "title": "Who I Am",
         "describe": "Nadir Bakhsh, I am a dedicated full-stack developer with more than 7 years of expertise in creating modern web and mobile applications. I focused to developing efficient, scalable, and user-friendly Web & APP, particularly use technologies for frontend like React, Next.js, Remix, and React Native. My passion to create smooth digital experiences for Business who want growth in the world."
