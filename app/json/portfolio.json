@@ -219,7 +219,7 @@
     "reviews": [
       {
         "comment": "Great experience. Nadir did a perfect job, project came out better than we expected and he delivered ahead of schedule. I highly recommend this seller, he communicates very well and is professional. Works fast and delivers excellent work!",
-        "username": "Fiveer user45599916",
+        "username": "Client: 45599916",
         "user_image_url": "./asset/user-placeholder.png",
         "value": 5,
         "reviewer_country": "United States"
@@ -227,13 +227,13 @@
       {
         "comment": "He is an expert programmer and create a wonderful custom website for me with full backend integration . It was a nice experience with him highly recommended!!! I will hair him in future as well. Thanks for everything!!",
         "username": "Manzar Ali",
-        "user_image_url": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/34b6b373b1300d008b646d0453cb3bbe-1670227984242/b1220a92-832f-49b0-9985-af49e4406c4d.PNG",
+        "user_image_url": "./asset/user-placeholder.png",
         "value": 5,
         "reviewer_country": "Pakistan"
       },
       {
         "comment": "He is an expert developer and develop my web application according to my requirements. Highly recommended!!",
-        "user_image_url": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/6af1087003384fd2c45ca393d2db7739-1606952434538/174fac41-5bb0-4315-a419-c6e09032f10b.PNG",
+        "user_image_url": "./asset/user-placeholder.png",
         "value": 5,
         "username": "Manzar Ali",
         "reviewer_country": "Pakistan"
