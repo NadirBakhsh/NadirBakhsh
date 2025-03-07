@@ -17,6 +17,7 @@ function ContactSection(props: Props) {
               <input
                 type="text"
                 id="name"
+                name="name"
                 className="peer block h-12 w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-primary-neutral"
                 placeholder=" "
               />
@@ -31,6 +32,7 @@ function ContactSection(props: Props) {
               <input
                 type="email"
                 id="email"
+                name="email"
                 className="peer block h-12 w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-ring-primary-neutral"
                 placeholder=" "
               />
@@ -44,20 +46,22 @@ function ContactSection(props: Props) {
             <div className="relative">
               <input
                 type="text"
-                id="website"
+                id="Phone Number"
+                name="Phone Number"
                 className="peer block h-12 w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-ring-primary-neutral"
                 placeholder=" "
               />
               <label
-                htmlFor="website"
+                htmlFor="Phone Number"
                 className="absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
               >
-                Your website (If exists)
+                Phone Number {`(Optional)`}
               </label>
             </div>
             <div className="relative">
               <textarea
                 id="message"
+                name="message"
                 rows={4}
                 className="peer block  w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-ring-primary-neutral"
                 placeholder=" "
@@ -66,7 +70,7 @@ function ContactSection(props: Props) {
                 htmlFor="message"
                 className="absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
               >
-                How can I help?*
+                Message
               </label>
             </div>
             <div className="flex flex-col md:flex-row gap-[8px]">
