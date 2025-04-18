@@ -11,8 +11,7 @@
   MeinProfilbild.de is an online platform that uses advanced AI technology to transform your selfies into professional application photos. Ideal for individuals needing high-quality profile pictures for professional networks or job applications.
 
 - **[Now Posh Admin Dashboard](https://dashboard-dev.nowposh.com/dashboard)**  
-  Developed an inventory management system for the super admin portal. The dashboard allows super admins to manage inventory, users, and other administrative tasks efficiently.  
-  #### Demo account  
+  Developed an inventory management system for the super admin portal. The dashboard allows super admins to manage inventory, users, and other administrative tasks efficiently. You can demo the admin dashboard by logging in with the following credentials:  
   - User email: superadmin@yopmail.com  
   - Password: Super@min123
 
