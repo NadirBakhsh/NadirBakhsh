@@ -94,10 +94,10 @@ function ContactSection(props: Props) {
             user-friendly, and memorable interactive experiences.
           </p>
           <h2 className=" text-2xl md:text-3xl  text-black font-semibold mt-6">
-            Youremail@gmail.com
+            Nadir Bakhsh
           </h2>
           <h2 className="text-2xl md:text-3xl  text-black font-semibold mt-2">
-            1234567890
+            +92 3052013106
           </h2>
         </div>
       </div>
