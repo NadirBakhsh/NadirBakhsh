@@ -17,7 +17,7 @@ function HeroSection(props: Props) {
             </div>
             <div>
               <span className="text-black  font-extrabold">
-                Frontend Developer
+                Fullstack Developer
               </span>
             </div>
             <div>

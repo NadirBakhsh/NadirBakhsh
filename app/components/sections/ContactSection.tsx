@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../ui/AppButton";
 import SocialMedia from "../ui/SocialMedia";
 
 interface Props {}
 
 function ContactSection(props: Props) {
-  const {} = props;
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   return (
     <div className="Contact h-auto bg-white pb-40">
@@ -18,12 +28,16 @@ function ContactSection(props: Props) {
                 type="text"
                 id="name"
                 name="name"
+                value={formData.name}
+                onChange={handleChange}
                 className="peer block h-12 w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-primary-neutral"
                 placeholder=" "
               />
               <label
                 htmlFor="name"
-                className="absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
+                className={`absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left ${
+                  formData.name ? "-translate-y-3 scale-75 text-primary-neutral" : "peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
+                }`}
               >
                 Your name
               </label>
@@ -33,12 +47,16 @@ function ContactSection(props: Props) {
                 type="email"
                 id="email"
                 name="email"
-                className="peer block h-12 w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-ring-primary-neutral"
+                value={formData.email}
+                onChange={handleChange}
+                className="peer block h-12 w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-primary-neutral"
                 placeholder=" "
               />
               <label
                 htmlFor="email"
-                className="absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
+                className={`absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left ${
+                  formData.email ? "-translate-y-3 scale-75 text-primary-neutral" : "peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
+                }`}
               >
                 Email
               </label>
@@ -46,14 +64,18 @@ function ContactSection(props: Props) {
             <div className="relative">
               <input
                 type="text"
-                id="Phone Number"
-                name="Phone Number"
-                className="peer block h-12 w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-ring-primary-neutral"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                className="peer block h-12 w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-primary-neutral"
                 placeholder=" "
               />
               <label
-                htmlFor="Phone Number"
-                className="absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
+                htmlFor="phone"
+                className={`absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left ${
+                  formData.phone ? "-translate-y-3 scale-75 text-primary-neutral" : "peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
+                }`}
               >
                 Phone Number {`(Optional)`}
               </label>
@@ -62,21 +84,27 @@ function ContactSection(props: Props) {
               <textarea
                 id="message"
                 name="message"
+                value={formData.message}
+                onChange={handleChange}
                 rows={4}
-                className="peer block  w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-ring-primary-neutral"
+                className="peer block w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-primary-neutral"
                 placeholder=" "
               ></textarea>
               <label
                 htmlFor="message"
-                className="absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
+                className={`absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left ${
+                  formData.message ? "-translate-y-3 scale-75 text-primary-neutral" : "peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
+                }`}
               >
                 Message
               </label>
             </div>
             <div className="flex flex-col md:flex-row gap-[8px]">
-              <Button size="md" className="max-w-[136px] text-sm ">Get In Touch</Button>
+              <Button size="md" className="max-w-[136px] text-sm ">
+                Get In Touch
+              </Button>
               <div className="flex gap-2 mt-3 md:mt-0">
-              <SocialMedia size="sm" />
+                <SocialMedia size="sm" />
               </div>
             </div>
           </form>
