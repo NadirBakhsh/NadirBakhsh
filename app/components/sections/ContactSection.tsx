@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import { Button } from "../ui/AppButton";
 import SocialMedia from "../ui/SocialMedia";
+import portfolio from "~/json/portfolio.json"
 
 interface Props {}
 
 function ContactSection(props: Props) {
+
+  const { ContactSection } = portfolio;
+const { title1, title2, describe, name, phone } = ContactSection;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
+  
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -112,20 +117,19 @@ function ContactSection(props: Props) {
 
         <div className="flex-1 mt-10 max-w-[600px] px-5">
           <h2 className="text-3xl md:text-5xl  text-black font-extrabold">
-            Let’s talk for
+            {title1}
           </h2>
-          <h2 className="text-3xl md:text-5xl mt-2 md:mt-3 text-black font-extrabold">
-            Something special
+          <h2 className="text-3xl md:text-4xl mt-2 md:mt-3 text-black font-extrabold">
+            {title2}
           </h2>
           <p className="text-base text-zinc-500 mt-5 ">
-            I seek to push the limits of creativity to create high-engaging,
-            user-friendly, and memorable interactive experiences.
+            {describe}
           </p>
           <h2 className=" text-2xl md:text-3xl  text-black font-semibold mt-6">
-            Nadir Bakhsh
+            {name}
           </h2>
           <h2 className="text-2xl md:text-3xl  text-black font-semibold mt-2">
-            +92 3052013106
+            {phone}
           </h2>
         </div>
       </div>
