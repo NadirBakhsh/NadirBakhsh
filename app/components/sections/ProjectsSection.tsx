@@ -9,7 +9,7 @@ function ProjectsSection(props: Props) {
   } = portfolioJson
 
   return (
-    <div className="Projects bg-black py-10 px-5 md:px-0">
+    <div id="projects" className="Projects bg-black py-10 px-5 md:px-0">
       <div className="container mx-auto py-5">
         <h2 className="text-5xl text-center text-white ">
           {" "}

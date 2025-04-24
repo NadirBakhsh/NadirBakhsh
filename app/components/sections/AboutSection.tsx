@@ -7,7 +7,7 @@ function AboutSection(props: Props) {
     AboutSection: { title, bio }
   } = portfolio
   return (
-    <div className="About h-auto bg-white px-5 md:px-0">
+    <div id="about" className="About h-auto bg-white py-5 px-5 md:px-0">
       <div className="container mx-auto flex flex-col md:flex-row  my-16 md:my-32 md:space-x-20">
         <div className="">
           <img alt="about-me" src="./asset/frame-1.png" />

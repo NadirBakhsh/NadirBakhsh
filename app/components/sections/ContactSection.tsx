@@ -23,7 +23,7 @@ const { title1, title2, describe, name, phone } = ContactSection;
   };
 
   return (
-    <div className="Contact h-auto bg-white pb-40">
+    <div id="contact" className="Contact h-auto bg-white pb-40">
       <div className="container mx-auto relative flex flex-col md:flex-row gap-10 md:gap-32">
         {/* Contact Form */}
         <div className="max-w-[500px] mt-10 flex-1 px-5">

@@ -11,7 +11,7 @@ function SkillSection(props: Props) {
   } = portfolioJson
 
   return (
-    <div className="skills h-auto bg-white w-full py-10  mt-16 px-5">
+    <div id="skills" className="skills h-auto bg-white w-full py-10  mt-16 px-5">
       <div className="container mx-auto flex flex-col items-center mt-10">
         <h2 className="text-5xl text-center">
           {" "}
