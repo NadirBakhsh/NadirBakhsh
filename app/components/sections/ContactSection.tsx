@@ -1,26 +1,26 @@
-import React, { useState } from "react";
-import { Button } from "../ui/AppButton";
-import SocialMedia from "../ui/SocialMedia";
+import React, { useState } from "react"
 import portfolio from "~/json/portfolio.json"
+import { Button } from "../ui/AppButton"
+import SocialMedia from "../ui/SocialMedia"
 
 interface Props {}
 
 function ContactSection(props: Props) {
-
-  const { ContactSection } = portfolio;
-const { title1, title2, describe, name, phone } = ContactSection;
+  const { ContactSection } = portfolio
+  const { title1, title2, describe, name, phone } = ContactSection
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    message: "",
-  });
-  
+    message: ""
+  })
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
 
   return (
     <div id="contact" className="Contact h-auto bg-white pb-40">
@@ -41,7 +41,9 @@ const { title1, title2, describe, name, phone } = ContactSection;
               <label
                 htmlFor="name"
                 className={`absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left ${
-                  formData.name ? "-translate-y-3 scale-75 text-primary-neutral" : "peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
+                  formData.name
+                    ? "-translate-y-3 scale-75 text-primary-neutral"
+                    : "peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
                 }`}
               >
                 Your name
@@ -60,7 +62,9 @@ const { title1, title2, describe, name, phone } = ContactSection;
               <label
                 htmlFor="email"
                 className={`absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left ${
-                  formData.email ? "-translate-y-3 scale-75 text-primary-neutral" : "peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
+                  formData.email
+                    ? "-translate-y-3 scale-75 text-primary-neutral"
+                    : "peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
                 }`}
               >
                 Email
@@ -79,7 +83,9 @@ const { title1, title2, describe, name, phone } = ContactSection;
               <label
                 htmlFor="phone"
                 className={`absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left ${
-                  formData.phone ? "-translate-y-3 scale-75 text-primary-neutral" : "peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
+                  formData.phone
+                    ? "-translate-y-3 scale-75 text-primary-neutral"
+                    : "peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
                 }`}
               >
                 Phone Number {`(Optional)`}
@@ -98,7 +104,9 @@ const { title1, title2, describe, name, phone } = ContactSection;
               <label
                 htmlFor="message"
                 className={`absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left ${
-                  formData.message ? "-translate-y-3 scale-75 text-primary-neutral" : "peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
+                  formData.message
+                    ? "-translate-y-3 scale-75 text-primary-neutral"
+                    : "peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
                 }`}
               >
                 Message
@@ -122,9 +130,7 @@ const { title1, title2, describe, name, phone } = ContactSection;
           <h2 className="text-3xl md:text-4xl mt-2 md:mt-3 text-black font-extrabold">
             {title2}
           </h2>
-          <p className="text-base text-zinc-500 mt-5 ">
-            {describe}
-          </p>
+          <p className="text-base text-zinc-500 mt-5 ">{describe}</p>
           <h2 className=" text-2xl md:text-3xl  text-black font-semibold mt-6">
             {name}
           </h2>
@@ -134,7 +140,7 @@ const { title1, title2, describe, name, phone } = ContactSection;
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default ContactSection;
+export default ContactSection
