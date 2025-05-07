@@ -12,7 +12,7 @@ import TestimonialSection from '~/components/sections/TestimonialSection'
 
 export const meta: MetaFunction = () => {
   return [
-    { title: 'New Remix App' },
+    { title: 'Nadir Portfolio' },
     { name: 'description', content: 'Welcome to Remix!' },
   ]
 }
