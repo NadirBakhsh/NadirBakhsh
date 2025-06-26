@@ -12,8 +12,7 @@
 
 - **[Now Posh Admin Dashboard](https://dashboard-dev.nowposh.com/dashboard)**  
   Developed an inventory management system for the super admin portal. The dashboard allows super admins to manage inventory, users, and other administrative tasks efficiently. You can demo the admin dashboard by logging in with the following credentials:  
-  - User email: superadmin@yopmail.com  
-  - Password: Super@min123
+
 
 - **[Mahaba](https://mahaba-git-dev-mahaba.vercel.app/)**
 Mahaba is a serious matchmaking platform for people genuinely looking for life partners. It includes profile creation, one-time image sharing (based on subscription or feature unlock), question/answer matching, and contact detail sharing. Users can find the best match through advanced filters. An admin dashboard allows full control over users and platform features.
