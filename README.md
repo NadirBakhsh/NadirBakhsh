@@ -17,4 +17,3 @@
 - **[Mahaba](https://mahaba-git-dev-mahaba.vercel.app/)**
 Mahaba is a serious matchmaking platform for people genuinely looking for life partners. It includes profile creation, one-time image sharing (based on subscription or feature unlock), question/answer matching, and contact detail sharing. Users can find the best match through advanced filters. An admin dashboard allows full control over users and platform features.
  
-
