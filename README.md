@@ -4,7 +4,12 @@
 - 🔭 I’m currently working on [Inventory System (QB clone)](https://pos-client-zeta.vercel.app/)
 - 🌱 I’m currently learning **NestJS Masterclass - NodeJS Framework Backend Development**
 - 💬 Ask me about **React, Nextjs and Nestjs**
-- 📍 Karachi, Pakistan  
+- 📍 Karachi, Pakistan
+
+---
+<h3 align="left">Languages and Tools:</h3>
+
+---  
 
 ### 📫 How to reach me
 <p align="left">
@@ -42,5 +47,3 @@ Mahaba is a serious matchmaking platform for people genuinely looking for life p
 More Projects:    
 🔗 [AOBLeaders](https://aobleaders.com/)  
 🔗 [PluckyFilms](https://www.pluckyfilms.com/)
-
-
