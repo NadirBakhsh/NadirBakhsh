@@ -33,9 +33,9 @@
 
 ### 📫 How to reach me
 <p align="left">
-<a href="https://twitter.com/nadirbatti" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="nadirbatti" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/www.linkedin.com/in/nadir-bakhsh" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="www.linkedin.com/in/nadir-bakhsh" height="30" width="40" /></a>
-<a href="https://fb.com/https://www.facebook.com/nadir.bakhsh/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="https://www.facebook.com/nadir.bakhsh/" height="30" width="40" /></a>
+<a href="https://twitter.com/nadirbatti" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="nadirbatti" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/nadir-bakhsh" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="www.linkedin.com/in/nadir-bakhsh" height="30" width="40" /></a>
+<a href="https://www.facebook.com/nadir.bakhsh/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="https://www.facebook.com/nadir.bakhsh/" height="30" width="40" /></a>
 <a href="https://instagram.com/nadir-bakhsh" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="nadir-bakhsh" height="30" width="40" /></a>
 <a href="https://medium.com/@nadir4k2010" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@nadir4k2010" height="30" width="40" /></a>
 </p>
