@@ -48,7 +48,6 @@
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=nadirbakhsh&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
 
 ---
-
 ## **PROFESSIONAL SUMMARY**
 Full-Stack JavaScript Engineer with over 5 years of experience building scalable web and mobile applications. Proven expertise in modern frameworks like **Next.js**, **React**, and **NestJS**, with a strong focus on performance optimization and clean UI/UX. Adept at delivering production-grade APIs, data-driven dashboards, and secure backend architectures. Recognized for leadership roles, team mentoring, and award-winning project delivery.
  
