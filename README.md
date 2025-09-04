@@ -14,7 +14,7 @@ My focus is on creating fast, accessible, and user-friendly experiences.
 
 #### 🌐 Connect with me
 - [GitHub](https://github.com/NadirBakhsh)
-- [LinkedIn](www.linkedin.com/in/nadir-bakhsh)
+- [LinkedIn](https://www.linkedin.com/in/nadir-bakhsh-39807413a/)
 - [X](https://x.com/NadirBatti)
 
 
