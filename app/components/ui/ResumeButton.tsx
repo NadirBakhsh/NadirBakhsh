@@ -1,18 +1,24 @@
 import { Icons } from "../icon"
 import { Button } from "./AppButton"
+import { Link } from "@remix-run/react"
 
 interface Props {}
 
 function ResumeButton(props: Props) {
   const {} = props
   return (
-    <Button
-      className="w-full md:w-auto flex items-center justify-center"
-      size="md"
+    <a
+      href="../../../cv/Nadir-Bakhsh-CV.pdf"
+      className="w-full md:w-auto"
+      download="Nadir-Bakhsh-CV.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
     >
-      <span className="h-full">Resume</span>
-      <Icons.Download />
-    </Button>
+      <Button size="sm" className="flex items-center justify-center gap-2">
+        <span>Resume</span>
+        <Icons.Download />
+      </Button>
+    </a>
   )
 }
 
