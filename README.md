@@ -6,9 +6,34 @@ Welcome to my Profile!
 [View Portfolio](https://nadir-bakhsh.vercel.app/)
 
 #### 🌟 About Me
-I'm a passionate full-stack developer from Pakistan, specializing in building modern web applications with React, Remix, and TypeScript.  
-I love solving problems, learning new technologies, and collaborating on open-source projects.  
-My focus is on creating fast, accessible, and user-friendly experiences.
+I’m Nadir Bakhsh, a self-taught Full-Stack Developer with a degree in Computer Science Engineering.
+I have over **7 years of experience** building scalable, user-friendly, and high-performance web and mobile applications using mostly JavaScript stacks React, Next.js, React Native, Node.js, and NestJS.
+
+Throughout my career, I’ve worked on a wide range of projects, from landing pages, dashboards and SaaS platforms. My expertise in write code Frontend or Backend, write clean code and integrating rest APIs,
+
+I am open to opportunities (remote or onsite) where I can further polish and improve my skills. I am looking for a team that believes in processes, writing clean and testable code, and making something big. 
+
+
+#### Skills
+<p> 
+Language	: 	JavaScript / ES6 
+</p>
+<p> 
+Frontend	:	React.js, Next.js, Remix, React Vite
+</p> 
+<p> 
+Backend: Nest.js Node.js, Express.js
+</p> 
+<p> 
+Database	: 	PostgreSQL, MongoDB, MySQL, Firebase
+</p> 
+<p> 
+Testing		: 	Mocha, Jest, Cypress
+</p> 
+<p> 
+Libraries	: 	Redux Toolkit, TanStack Query, SWR, Shadcn/UI, Zod, TanStack Table
+</p> 
+
 
 ---
 
