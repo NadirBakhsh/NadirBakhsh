@@ -14,7 +14,7 @@ Throughout my career, I’ve worked on a wide range of projects, from landing pa
 I am open to opportunities (remote or onsite) where I can further polish and improve my skills. I am looking for a team that believes in processes, writing clean and testable code, and making something big. 
 
 
-#### Skills
+### Skills
 **Language:** JavaScript / ES6
 
 **Frontend:** React.js, Next.js, Remix, React Vite
