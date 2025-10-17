@@ -16,15 +16,10 @@ I am open to opportunities (remote or onsite) where I can further polish and imp
 
 #### Skills
 **Language:** JavaScript / ES6
-
 **Frontend:** React.js, Next.js, Remix, React Vite
-
 **Backend:** Nest.js, Node.js, Express.js
-
 **Database:** PostgreSQL, MongoDB, MySQL, Firebase
-
 **Testing:** Mocha, Jest, Cypress
-
 **Libraries:** Redux Toolkit, TanStack Query, SWR, Shadcn/UI, Zod, TanStack Table
 
 
