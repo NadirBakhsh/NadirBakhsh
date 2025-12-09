@@ -224,23 +224,6 @@
         "image":"./projects-mock-ups/Pikky-Mock-up/pikky-ai-food.png",
         "link":"https://pikky.io/" 
       },
-      // {
-      //   "name": "NextThing",
-      //   "describe": "Developed Merketing and investment platform. where connect investors with NextThing company. The platform provides a streamlined experience for investors to buy shares provide agreement.",
-      //   "features": [
-      //     "💻 Marketing dynamic Landing Pages",
-      //     "📝 Register form",
-      //     "🔒 Login Form",
-      //     "👥 Investor Profiles",
-      //     "📊 Investor Dashboard",
-      //     "💸 Transtion tracking system",
-      //     "📈 Buying shares",
-      //     "📝 Agreements",
-      //     "📊 Company Dashboard"
-      //   ],
-      //   "image":"./projects-mock-ups/Nextbolt-Mock-ups/nextthings.png",
-      //   "link":"https://www.nextthing.tech/" 
-      // },
       {
         "name": "MeinProfilbild.de - AI-Powered Portfolio Generator",
         "describe": "MeinProfilbild.de is an online platform that uses advanced AI technology to transform your selfies into professional application photos. This service is ideal for individuals who need high-quality profile pictures for professional networks like LinkedIn or for job applications quickly and easily.",
