@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nadir Bux — Fullstack Developer</title>
+    <meta name="description" content="Fullstack Developer specializing in React, Next.js, and modern web technologies. Open to work.">
+    <meta name="keywords" content="fullstack developer, react, next.js, frontend, backend, web development">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* Custom Monochrome Color Palette */
+        :root {
+            --black: #000000;
+            --white: #FFFFFF;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-400: #9CA3AF;
+            --gray-500: #6B7280;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --gray-800: #1F2937;
+            --gray-900: #111827;
+        }
+        
+        /* Typography */
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+        .font-mono { font-family: 'Space Mono', monospace; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--white);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--black);
+        }
+        
+        /* Selection */
+        ::selection {
+            background: var(--black);
+            color: var(--white);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .animate-slide-in-right {
+            animation: slideInRight 0.6s ease-out forwards;
+        }
+        
+        .animate-pulse-slow {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        /* Page Transitions */
+        .page {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        
+        .page.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+            position: relative;
+        }
+        
+        /* Hover Effects */
+        .hover-underline {
+            position: relative;
+        }
+        
+        .hover-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--black);
+            transition: width 0.3s ease;
+        }
+        
+        .hover-underline:hover::after {
+            width: 100%;
+        }
+        
+        .hover-invert {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-invert:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+        
+        .hover-invert-white {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-invert-white:hover {
+            background: var(--white);
+            color: var(--black);
+            border-color: var(--white);
+        }
+        
+        .hover-scale {
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        
+        .project-card:hover .project-image {
+            filter: grayscale(100%) brightness(0.3);
+        }
+        
+        /* Marquee */
+        .marquee-container {
+            overflow: hidden;
+        }
+        
+        .marquee-content {
+            display: flex;
+            animation: marquee 20s linear infinite;
+        }
+        
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
+        
+        /* Cursor */
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--black);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+        }
+        
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--black);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            transition: all 0.2s ease;
+        }
+        
+        .cursor-outline.hover {
+            transform: translate(-50%, -50%) scale(1.5);
+            background: var(--black);
+        }
+        
+        /* Form */
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--black);
+        }
+        
+        /* Navigation */
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--black);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Filter Button */
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn.active {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+        
+        /* Image Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.4s ease;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        
+        /* Testimonial Slider */
+        .testimonial-slide {
+            display: none;
+        }
+        
+        .testimonial-slide.active {
+            display: block;
+        }
+        
+        /* Status Badge */
+        .status-badge {
+            animation: pulse 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-sans bg-white text-black antialiased">
+    <!-- Custom Cursor -->
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="font-serif text-xl font-medium hover-underline smooth-scroll">Nadir.B</a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8 font-mono text-sm">
+                <a href="#hero" class="nav-link smooth-scroll">Home</a>
+                <a href="#about" class="nav-link smooth-scroll">About Me</a>
+                <a href="#skills" class="nav-link smooth-scroll">Skills</a>
+                <a href="#experience" class="nav-link smooth-scroll">Experience</a>
+                <a href="#projects" class="nav-link smooth-scroll">Projects</a>
+                <a href="#contact" class="nav-link smooth-scroll">Contact</a>
+                <a href="#" onclick="downloadResume()" class="nav-link">Resume</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button onclick="toggleMobileMenu()" class="md:hidden p-2 hover:bg-gray-100">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white z-40 border-l border-gray-200 pt-20 px-6">
+        <div class="flex flex-col gap-6 font-mono text-lg">
+            <a href="#hero" onclick="toggleMobileMenu();" class="hover-underline smooth-scroll">Home</a>
+            <a href="#about" onclick="toggleMobileMenu();" class="hover-underline smooth-scroll">About Me</a>
+            <a href="#skills" onclick="toggleMobileMenu();" class="hover-underline smooth-scroll">Skills</a>
+            <a href="#experience" onclick="toggleMobileMenu();" class="hover-underline smooth-scroll">Experience</a>
+            <a href="#projects" onclick="toggleMobileMenu();" class="hover-underline smooth-scroll">Projects</a>
+            <a href="#contact" onclick="toggleMobileMenu();" class="hover-underline smooth-scroll">Contact</a>
+            <a href="#" onclick="toggleMobileMenu(); downloadResume();" class="hover-underline">Resume</a>
+        </div>
+    </div>
+    
+    <!-- Main Content Container -->
+    <main id="mainContent" class="pt-20">
+        
+        <!-- HERO SECTION -->
+        <section id="hero" class="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 border-b border-gray-200 relative overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://www.dropbox.com/scl/fi/gg209n47ii6ehbb00esi7/hero.png?rlkey=ikk1d3pkkfxjgk74vxryrvgby&st=1ti4j5k2&dl=1" 
+                     alt="Nadir Bux - Fullstack Developer"
+                     class="w-full h-full object-cover filter grayscale opacity-100"
+                     onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\"w-full h-full bg-gradient-to-br from-gray-100 to-gray-300\"></div>'">
+            </div>
+            
+            <div class="max-w-5xl relative z-10">
+                <p class="font-mono text-sm md:text-base mb-4 animate-fade-in-up" style="animation-delay: 0.1s;">
+                    <span class="status-badge inline-block w-2 h-2 bg-black rounded-full mr-2"></span>
+                    Open to Work
+                </p>
+                <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium leading-tight animate-fade-in-up" style="animation-delay: 0.2s;">
+                    Hello I'm<br>Nadir Bux
+                </h1>
+                <p class="font-serif text-3xl md:text-5xl lg:text-6xl text-gray-400 mt-2 animate-fade-in-up" style="animation-delay: 0.3s;">
+                    Fullstack Developer
+                </p>
+                <p class="font-mono text-sm md:text-base mt-8 max-w-xl text-gray-500 animate-fade-in-up" style="animation-delay: 0.4s;">
+                    Hi, I'm Nadir Bux, a passionate Fullstack developer specializing in Frontend development with responsive design, and user-friendly web and Apps. With a strong background in React, Remix, Next.js, Tailwind CSS and modern JavaScript libraries, please feel free to connect with me and discuss your project.
+                </p>
+                <div class="mt-12 flex flex-wrap gap-4 animate-fade-in-up" style="animation-delay: 0.5s;">
+                    <a href="#projects" class="inline-block font-mono text-sm px-8 py-4 border border-black hover-invert smooth-scroll">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="inline-block font-mono text-sm px-8 py-4 border border-gray-300 hover-invert-white smooth-scroll">
+                        Get In Touch
+                    </a>
+                    <a href="#about" class="inline-block font-mono text-sm px-8 py-4 border border-gray-300 hover-invert-white smooth-scroll">
+                        About Me
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SKILLS MARQUEE -->
+        <section class="py-8 border-b border-gray-200 bg-white overflow-hidden">
+            <div class="marquee-container">
+                <div class="marquee-content flex gap-12">
+                    <!-- First set -->
+                    <div class="flex items-center gap-12">
+                        <span class="font-mono text-sm whitespace-nowrap">JavaScript</span>
+                        <span class="font-mono text-sm whitespace-nowrap">TypeScript</span>
+                        <span class="font-mono text-sm whitespace-nowrap">React</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Next.js</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Remix</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Tailwind CSS</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Redux</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Storybook</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Node.js</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Express</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Nest.js</span>
+                        <span class="font-mono text-sm whitespace-nowrap">MongoDB</span>
+                        <span class="font-mono text-sm whitespace-nowrap">MySQL</span>
+                        <span class="font-mono text-sm whitespace-nowrap">PostgreSQL</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Firebase</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Git</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Docker</span>
+                        <span class="font-mono text-sm whitespace-nowrap">React Native</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Material-UI</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Ant Design</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Shadcn UI</span>
+                    </div>
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="flex items-center gap-12">
+                        <span class="font-mono text-sm whitespace-nowrap">JavaScript</span>
+                        <span class="font-mono text-sm whitespace-nowrap">TypeScript</span>
+                        <span class="font-mono text-sm whitespace-nowrap">React</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Next.js</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Remix</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Tailwind CSS</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Redux</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Storybook</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Node.js</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Express</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Nest.js</span>
+                        <span class="font-mono text-sm whitespace-nowrap">MongoDB</span>
+                        <span class="font-mono text-sm whitespace-nowrap">MySQL</span>
+                        <span class="font-mono text-sm whitespace-nowrap">PostgreSQL</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Firebase</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Git</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Docker</span>
+                        <span class="font-mono text-sm whitespace-nowrap">React Native</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Material-UI</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Ant Design</span>
+                        <span class="font-mono text-sm whitespace-nowrap">Shadcn UI</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="py-20 px-6 md:px-12 lg:px-20 border-b border-gray-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <h2 class="font-serif text-4xl md:text-5xl mb-4">My Skills</h2>
+                    <p class="font-mono text-sm text-gray-500">Technologies & Tools · 7+ Years Experience</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Languages -->
+                    <div class="reveal">
+                        <div class="p-6 border border-gray-200 hover:border-black transition-colors h-full">
+                            <h3 class="font-serif text-xl mb-4">Languages</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">JavaScript</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">TypeScript</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Python</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">HTML5</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">CSS3</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Frontend -->
+                    <div class="reveal">
+                        <div class="p-6 border border-gray-200 hover:border-black transition-colors h-full">
+                            <h3 class="font-serif text-xl mb-4">Frontend Framwork</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Next.js</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Remix</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">React Native</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Expo</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Tailwindcss</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Angular</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend -->
+                    <div class="reveal">
+                        <div class="p-6 border border-gray-200 hover:border-black transition-colors h-full">
+                            <h3 class="font-serif text-xl mb-4">Backend</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Node.js</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Express</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Nest.js</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">REST APIs</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Web Services</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Database -->
+                    <div class="reveal">
+                        <div class="p-6 border border-gray-200 hover:border-black transition-colors h-full">
+                            <h3 class="font-serif text-xl mb-4">Database</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">MongoDB</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">MySQL</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">PostgreSQL</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Firebase</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">neoundb</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">supbase</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tools -->
+                    <div class="reveal">
+                        <div class="p-6 border border-gray-200 hover:border-black transition-colors h-full">
+                            <h3 class="font-serif text-xl mb-4">Tools</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Git</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Docker</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">VS Code</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Figma</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Cursor AI IDE</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Postman</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">npm</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Libraries -->
+                    <div class="reveal">
+                        <div class="p-6 border border-gray-200 hover:border-black transition-colors h-full">
+                            <h3 class="font-serif text-xl mb-4">Libraries</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">React</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Redux</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Axios</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Socket.io</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">JWT</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Lodash</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Shadcn</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Ant Design</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">untitled UI</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Methodologies -->
+                    <div class="reveal">
+                        <div class="p-6 border border-gray-200 hover:border-black transition-colors h-full">
+                            <h3 class="font-serif text-xl mb-4">Methodologies</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Agile</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Scrum</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">CI/CD</span>
+                                <span class="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors">Code Review</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience" class="py-20 px-6 md:px-12 lg:px-20 border-b border-gray-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <h2 class="font-serif text-4xl md:text-5xl mb-4">My Experience</h2>
+                    <p class="font-mono text-sm text-gray-500">Professional Journey · 2019 — Present</p>
+                </div>
+                
+                <div class="space-y-8">
+                    <!-- Now Posh -->
+                    <div class="reveal border-l-2 border-black pl-6 md:pl-8">
+                        <p class="font-mono text-sm text-gray-400 mb-1">Jan 2024 - Present</p>
+                        <h3 class="font-serif text-xl">Senior Software Engineer</h3>
+                        <p class="text-gray-600 mb-2">Now Posh - IT Department</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            At Now Posh, I worked as a Full Stack Developer and Team Lead, overseeing both frontend and backend development. I led a team of developers, maintained code quality, and optimized workflows for efficient project execution. My role involved building scalable web applications, implementing secure authentication, and integrating RESTful APIs for smooth data exchange. Leveraging React.js, Next.js, and Node.js, I developed high-performance, user-friendly interfaces. Additionally, I conducted code reviews and mentorship sessions, fostering a strong development culture. My contributions enhanced project efficiency, improved application reliability, and accelerated delivery timelines.
+                        </p>
+                    </div>
+                    
+                    <!-- Designocracy -->
+                    <div class="reveal border-l-2 border-black pl-6 md:pl-8">
+                        <p class="font-mono text-sm text-gray-400 mb-1">Jan 2021 - Nov 2024</p>
+                        <h3 class="font-serif text-xl">Full Stack Engineer</h3>
+                        <p class="text-gray-600 mb-2">Designocracy</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            At Designocracy, I began as a Frontend UI Developer, focusing on creating responsive and user-friendly interfaces while integrating APIs to enhance functionality. My expertise in React.js, Next.js, and modern UI frameworks contributed to streamlined development and improved user experience. Recognizing my contributions, I was promoted to Full Stack Engineer, where I collaborated with backend teams to design REST API data schemas and integrated them into the frontend. Over time, I played a key role in optimizing performance, ensuring scalability, and maintaining high code standards. Later, I advanced to a Part-Time Full Stack Engineer, continuing to build scalable web solutions while mentoring junior developers and conducting code reviews to enhance overall project quality.
+                        </p>
+                    </div>
+                    
+                    <!-- Pikky -->
+                    <div class="reveal border-l-2 border-black pl-6 md:pl-8">
+                        <p class="font-mono text-sm text-gray-400 mb-1">Jan 2023 - Nov 2024</p>
+                        <h3 class="font-serif text-xl">Frontend Engineer</h3>
+                        <p class="text-gray-600 mb-2">Pikky</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            For Pikky, I developed both the Restaurant Dashboard and the Mobile Application, ensuring a seamless experience for restaurant owners and customers. The Restaurant Dashboard was built using React.js, providing intuitive order management, analytics, and real-time updates. The Mobile App, developed with React Native, offered a user-friendly interface for placing orders, tracking deliveries, and making secure payments. I implemented authentication and API integrations, ensuring data security and smooth communication between the frontend and backend. Leading code reviews, I maintained high coding standards and optimized performance. Additionally, I mentored junior developers, improving team efficiency and overall project quality.
+                        </p>
+                    </div>
+                    
+                    <!-- Expertizo -->
+                    <div class="reveal border-l-2 border-black pl-6 md:pl-8">
+                        <p class="font-mono text-sm text-gray-400 mb-1">Feb 2020 - Jan 2021</p>
+                        <h3 class="font-serif text-xl">Full-stack Developer</h3>
+                        <p class="text-gray-600 mb-2">Expertizo</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            I developed and maintained scalable React applications, ensuring high performance and efficiency. My role involved implementing robust authentication mechanisms to enhance security. I integrated various APIs seamlessly, optimizing data flow and user experience. Leading code reviews, I provided constructive feedback to improve code quality. I also mentored junior developers, fostering a culture of continuous learning. These efforts streamlined development workflows and boosted overall team productivity.
+                        </p>
+                    </div>
+                    
+                    <!-- Upwork -->
+                    <div class="reveal border-l-2 border-black pl-6 md:pl-8">
+                        <p class="font-mono text-sm text-gray-400 mb-1">Jan 2019 - Present</p>
+                        <h3 class="font-serif text-xl">Frontend Engineer (Freelance)</h3>
+                        <p class="text-gray-600 mb-2">Upwork</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            I work as a part-time freelancer on Upwork, specializing in frontend development with a strong focus on React.js, Next.js, and modern UI frameworks. I have successfully delivered multiple projects with top ratings, ensuring high-quality, scalable, and user-friendly applications. My expertise includes crafting responsive interfaces, optimizing performance, and implementing secure API integrations for seamless user experiences. By following best coding practices, I ensure clean, maintainable, and efficient code. I also contribute to development workflows through code reviews and mentorship. My dedication to client satisfaction and attention to detail help me deliver reliable and high-performing solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+        <!-- ABOUT SECTION -->
+        <section id="about" class="py-20 px-6 md:px-12 lg:px-20 border-b border-gray-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    <!-- Left Column -->
+                    <div>
+                        <div class="aspect-square bg-gray-100 mb-8 overflow-hidden relative">
+                            <img src="https://www.dropbox.com/scl/fi/dv7jiipvzsscdi6m1tyv1/about-section.png?rlkey=0m69u9awsdntywet1fz0axpll&st=u8oxv56w&dl=1" 
+                                 alt="Nadir Bux - Fullstack Developer" 
+                                 class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
+                                 onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\"font-serif text-8xl text-gray-300 absolute inset-0 flex items-center justify-center\">NB</span>'">
+                        </div>
+                        <h2 class="font-serif text-4xl md:text-5xl mb-6">About Me</h2>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Nadir Bakhsh, I am a dedicated full-stack developer with more than 7 years of expertise in creating modern web and mobile applications. I focused to developing efficient, scalable, and user-friendly Web & APP, particularly use technologies for frontend like React, Next.js, Remix, and React Native. My passion to create smooth digital experiences for Business who want growth in the world.
+                        </p>
+                        
+                        <div class="border-t border-gray-200 pt-8">
+                            <h3 class="font-serif text-2xl mb-4">What I Do</h3>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Crafting high quality of web & APPs using JavaScript frameworks such as Next.js and React, along with backend solutions powered by Node.js and Nest.js. My skills also include working with databases like MongoDB, MySQL, PostgreSQL and Firebase. This ensures the solutions I develop are both resilient and scalable.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed">
+                                Additionally, I have a strong proficiency in UI/UX design, utilizing frameworks like Tailwind CSS, Material-UI, and Ant Design to create interfaces.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column -->
+                    <div>
+                        <div class="border-t border-gray-200 pt-8 mb-8">
+                            <h3 class="font-serif text-2xl mb-6">My Education</h3>
+                            <div class="space-y-4">
+                                <div class="border-l-2 border-black pl-4">
+                                    <p class="font-mono text-sm text-gray-400">IT Diploma</p>
+                                    <p class="font-serif text-lg">SMIT</p>
+                                    <p class="text-gray-600">Top 10 Result</p>
+                                </div>
+                                <div class="border-l-2 border-black pl-4">
+                                    <p class="font-mono text-sm text-gray-400">Intermediate</p>
+                                    <p class="font-serif text-lg">Superior Science College</p>
+                                </div>
+                                <div class="border-l-2 border-black pl-4">
+                                    <p class="font-mono text-sm text-gray-400">High School</p>
+                                    <p class="font-serif text-lg">Ataturk Public School</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t border-gray-200 pt-8 mb-8">
+                            <h3 class="font-serif text-2xl mb-6">Achievements</h3>
+                            <div class="space-y-4">
+                                <div class="border-l-2 border-black pl-4">
+                                    <p class="font-serif text-lg">Best Employee of the Month</p>
+                                    <p class="text-gray-600">Designocracy (3 times)</p>
+                                </div>
+                                <div class="border-l-2 border-black pl-4">
+                                    <p class="font-serif text-lg">Promoted to Team Lead</p>
+                                    <p class="text-gray-600">Now Posh (2 months after joining)</p>
+                                </div>
+                                <div class="border-l-2 border-black pl-4">
+                                    <p class="font-serif text-lg">Top 10 IT Diploma Result</p>
+                                    <p class="text-gray-600">SMIT</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t border-gray-200 pt-8">
+                            <h3 class="font-serif text-2xl mb-6">Future Goals</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Continue advancing the fields of web and mobile development, adopting upcoming technologies, and providing outstanding digital solutions that drive business growth and user satisfaction.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="py-20 px-6 md:px-12 lg:px-20 border-b border-gray-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <h2 class="font-serif text-4xl md:text-5xl mb-4">My Projects</h2>
+                    <p class="font-mono text-sm text-gray-500">Selected work · 2019 — 2024</p>
+                </div>
+                
+                <!-- Filters -->
+                <div class="flex flex-wrap gap-6 mb-12 font-mono text-sm">
+                    <button onclick="filterProjects('all')" class="filter-btn active" data-filter="all">All</button>
+                    <button onclick="filterProjects('ai')" class="filter-btn" data-filter="ai">AI Platform</button>
+                    <button onclick="filterProjects('dashboard')" class="filter-btn" data-filter="dashboard">Dashboard</button>
+                    <button onclick="filterProjects('mobile')" class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button onclick="filterProjects('ecommerce')" class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+                </div>
+                
+                <!-- Projects Grid -->
+                <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Projects will be populated by JS -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- TESTIMONIALS SECTION -->
+        <section id="testimonials" class="py-20 px-6 md:px-12 lg:px-20 border-b border-gray-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <h2 class="font-serif text-4xl md:text-5xl mb-4">My Testimonial</h2>
+                    <p class="font-mono text-sm text-gray-500">Client Feedback · Worldwide</p>
+                </div>
+                
+                <div id="testimonialSlider" class="relative">
+                    <div class="testimonial-slide active">
+                        <div class="p-8 border border-gray-200">
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                "Great experience. Nadir did a perfect job, project came out better than we expected 
+                                and he delivered ahead of schedule. I highly recommend this seller, he communicates 
+                                very well and is professional."
+                            </p>
+                            <p class="font-mono text-sm text-gray-400">Client: 45599916 · United States</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="p-8 border border-gray-200">
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                "He is an expert programmer and create a wonderful custom website for me with 
+                                full backend integration . It was a nice experience with him highly recommended!!! 
+                                I will hair him in future as well. Thanks for everything!!"
+                            </p>
+                            <p class="font-mono text-sm text-gray-400">Manzar Ali · Pakistan</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="p-8 border border-gray-200">
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                "He is an expert developer and develop my web application according to my requirements. Highly recommended!!"
+                            </p>
+                            <p class="font-mono text-sm text-gray-400">Manzar Ali · Pakistan</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="p-8 border border-gray-200">
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                "Awesome developer, attention to details and very responsive."
+                            </p>
+                            <p class="font-mono text-sm text-gray-400">Dean · Canada</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="p-8 border border-gray-200">
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                "It was great enjoyed working with him, excellent communication with suggestions over all amazing experience....I'd recommend anyone."
+                            </p>
+                            <p class="font-mono text-sm text-gray-400">Dean · Canada</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="p-8 border border-gray-200">
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                "Very professional and delivery great recommanded developer"
+                            </p>
+                            <p class="font-mono text-sm text-gray-400">Mederouich · Morocco</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="p-8 border border-gray-200">
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                "Great developer, very nice experience with nadir , very professional, and do the job properly."
+                            </p>
+                            <p class="font-mono text-sm text-gray-400">Mederouich · Morocco</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 mt-6 justify-center">
+                        <button onclick="prevTestimonial()" class="p-2 border border-gray-200 hover:border-black transition-colors">
+                            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                        </button>
+                        <button onclick="nextTestimonial()" class="p-2 border border-gray-200 hover:border-black transition-colors">
+                            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="py-20 px-6 md:px-12 lg:px-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="font-serif text-4xl md:text-5xl mb-6">Get In Touch</h2>
+                        <p class="text-gray-600 leading-relaxed mb-8">
+                            Let's talk Idea<br>
+                            build Something special<br>
+                            I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences.
+                        </p>
+                        
+                        <div class="space-y-4 font-mono text-sm mb-12">
+                            <p class="font-serif text-lg">Nadir Bakhsh</p>
+                            <a href="tel:+923052013106" class="block hover-underline">+92 3052013106</a>
+                            <p class="text-gray-400">Karachi, Pakistan</p>
+                        </div>
+                        
+                        <div class="border-t border-gray-200 pt-8">
+                            <h3 class="font-serif text-2xl mb-4">Follow</h3>
+                            <div class="flex gap-6">
+                                <a href="#" class="hover-underline font-mono text-sm">LinkedIn</a>
+                                <a href="#" class="hover-underline font-mono text-sm">GitHub</a>
+                                <a href="#" class="hover-underline font-mono text-sm">Upwork</a>
+                                <a href="#" class="hover-underline font-mono text-sm">Behance</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <form id="contactForm" class="space-y-6" onsubmit="handleSubmit(event)">
+                            <div>
+                                <label class="block font-mono text-xs mb-2">Your name</label>
+                                <input type="text" name="name" required class="w-full p-4 border border-gray-200 font-mono text-sm bg-transparent hover:border-black transition-colors">
+                            </div>
+                            <div>
+                                <label class="block font-mono text-xs mb-2">Email</label>
+                                <input type="email" name="email" required class="w-full p-4 border border-gray-200 font-mono text-sm bg-transparent hover:border-black transition-colors">
+                            </div>
+                            <div>
+                                <label class="block font-mono text-xs mb-2">Phone Number (Optional)</label>
+                                <input type="tel" name="phone" class="w-full p-4 border border-gray-200 font-mono text-sm bg-transparent hover:border-black transition-colors">
+                            </div>
+                            <div>
+                                <label class="block font-mono text-xs mb-2">Message</label>
+                                <textarea name="message" rows="5" required class="w-full p-4 border border-gray-200 font-mono text-sm bg-transparent hover:border-black transition-colors resize-none" placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full font-mono text-sm px-8 py-4 border border-black hover-invert">
+                                Send Message
+                            </button>
+                        </form>
+                        <div id="formSuccess" class="hidden mt-6 p-4 border border-black bg-black text-white text-center font-mono text-sm">
+                            Thank you! I'll get back to you soon.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- PROJECT DETAIL MODAL -->
+        <div id="projectModal" class="fixed inset-0 z-50 bg-white overflow-y-auto hidden">
+            <div class="min-h-screen">
+                <!-- Modal Header -->
+                <div class="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 px-6 md:px-12 lg:px-20 py-4 flex justify-between items-center">
+                    <button onclick="closeProject()" class="font-mono text-sm hover-underline flex items-center gap-2">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Projects
+                    </button>
+                    <div class="flex gap-4">
+                        <button onclick="prevProject()" class="p-2 border border-gray-200 hover:border-black transition-colors">
+                            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                        </button>
+                        <button onclick="nextProject()" class="p-2 border border-gray-200 hover:border-black transition-colors">
+                            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Modal Content -->
+                <div id="projectContent" class="max-w-5xl mx-auto px-6 md:px-12 lg:px-20 py-12">
+                    <!-- Content populated by JS -->
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 py-8 px-6 md:px-12 lg:px-20">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-mono text-xs text-gray-400">© 2025 Nadir.B, All Rights Reserved.</p>
+            <p class="font-mono text-xs text-gray-400">Built with precision and care.</p>
+        </div>
+    </footer>
+
+    <script>
+        // === DATA ===
+        const projects = [
+            {
+                id: 0,
+                title: "Pikky AI – Food Assistant",
+                category: "AI Platform",
+                filter: "ai",
+                year: "2023-2024",
+                role: "Frontend Engineer",
+                tools: "React.js, React Native, Node.js, MongoDB, REST APIs",
+                link: "https://pikky.io/",
+                overview: "Pikky is an AI-driven platform designed to enhance the dining experience by connecting restaurants with their guests on a deeper level. It offers personalized food recommendations to diners while providing restaurants with actionable insights.",
+                problem: "Restaurants struggle to understand customer preferences, and diners face difficulty finding suitable restaurants and dishes that match their taste and dietary needs.",
+                solution: "Built a comprehensive AI-powered platform with restaurant dashboard (React.js) and mobile app (React Native). Implemented real-time order management, analytics, and personalized recommendations using machine learning algorithms.",
+                features: [
+                    "Discover Restaurants – Browse based on location, cuisine, and preferences",
+                    "Interactive Map – Find nearby restaurants with real-time navigation",
+                    "Dish Selector – Choose dishes based on taste preferences and dietary restrictions",
+                    "Allergy Awareness – Get alerts for potential allergens",
+                    "Nutritional Information – View detailed nutritional breakdown",
+                    "Restaurant Menu Screen – Check detailed menus before visiting",
+                    "Navigation Assistance – Step-by-step directions to selected restaurant"
+                ],
+                images: ["#E5E7EB", "#D1D5DB", "#F3F4F6"],
+                nextId: 1,
+                prevId: 2
+            },
+            {
+                id: 1,
+                title: "MeinProfilbild.de",
+                category: "AI Service",
+                filter: "ai",
+                year: "2022-2023",
+                role: "Full Stack Developer",
+                tools: "Next.js, TypeScript, Strapi, PostgreSQL, Tailwind CSS",
+                link: "https://meinprofilbild.de/",
+                overview: "An online platform that uses advanced AI technology to transform your selfies into professional application photos. Ideal for individuals who need high-quality profile pictures for LinkedIn or job applications.",
+                problem: "Getting professional headshots is expensive and time-consuming. People need quick, affordable, high-quality profile photos for professional networking.",
+                solution: "Developed a full-stack application with Next.js frontend, Strapi CMS for content management, and AI integration for image processing. Implemented secure authentication, payment processing, and a dynamic blogging system.",
+                features: [
+                    "Register & Login system with secure authentication",
+                    "Profile setup and user management",
+                    "Upload 4-5 images for AI processing",
+                    "AI-powered profile picture generation",
+                    "Dynamic blogging system with Strapi",
+                    "Profile image viewer with zoom functionality",
+                    "Responsive user experience across all devices",
+                    "SEO-friendly website architecture"
+                ],
+                images: ["#F9FAFB", "#E5E7EB", "#D1D5DB"],
+                nextId: 2,
+                prevId: 0
+            },
+            {
+                id: 2,
+                title: "Aldi US Dashboard",
+                category: "Dashboard",
+                filter: "dashboard",
+                year: "2021-2022",
+                role: "Full Stack Engineer",
+                tools: "React, Next.js, Node.js, PostgreSQL, Redux, Tailwind CSS",
+                link: "",
+                overview: "Enterprise-level dashboard for Aldi US operations, providing real-time insights into sales, inventory, and operational metrics across multiple locations.",
+                problem: "Managing multiple retail locations with scattered data sources made it difficult to get real-time insights and make data-driven decisions.",
+                solution: "Built a comprehensive dashboard with real-time data synchronization, advanced analytics, and role-based access control. Integrated multiple data sources and implemented automated reporting.",
+                features: [
+                    "Real-time sales tracking and analytics",
+                    "Inventory management across multiple locations",
+                    "Employee performance tracking",
+                    "Automated report generation",
+                    "Role-based access control",
+                    "Data visualization with interactive charts",
+                    "Mobile-responsive design",
+                    "Export functionality for reports"
+                ],
+                images: ["#111827", "#1F2937", "#374151"],
+                nextId: 0,
+                prevId: 1
+            },
+            {
+                id: 3,
+                title: "Mahaba",
+                category: "E-Commerce",
+                filter: "ecommerce",
+                year: "2020-2021",
+                role: "Full Stack Developer",
+                tools: "React, Node.js, MongoDB, Express, Stripe",
+                link: "",
+                overview: "Full-featured e-commerce platform for a fashion brand, with product catalog, shopping cart, checkout, and admin management system.",
+                problem: "The client needed a scalable e-commerce solution to sell products online with secure payments and inventory management.",
+                solution: "Developed a complete e-commerce solution with React frontend, Node.js backend, and MongoDB for data storage. Integrated Stripe for secure payments and implemented inventory tracking.",
+                features: [
+                    "Product catalog with search and filters",
+                    "Shopping cart and wishlist functionality",
+                    "Secure checkout with Stripe integration",
+                    "Order tracking and management",
+                    "Admin dashboard for inventory management",
+                    "Customer account management",
+                    "Responsive mobile-first design",
+                    "SEO optimization"
+                ],
+                images: ["#F3F4F6", "#E5E7EB", "#D1D5DB"],
+                nextId: 4,
+                prevId: 2
+            },
+            {
+                id: 4,
+                title: "Restaurant Dashboard",
+                category: "Dashboard",
+                filter: "dashboard",
+                year: "2023",
+                role: "Frontend Engineer",
+                tools: "React.js, Redux, Chart.js, Tailwind CSS",
+                link: "",
+                overview: "Intuitive restaurant management dashboard for order tracking, menu management, and analytics. Built for restaurant owners to streamline operations.",
+                problem: "Restaurant owners needed a centralized system to manage orders, track performance, and update menus efficiently.",
+                solution: "Created a responsive dashboard with real-time order updates, analytics charts, and easy menu management. Implemented WebSocket for live updates.",
+                features: [
+                    "Real-time order management",
+                    "Sales analytics and reporting",
+                    "Menu management system",
+                    "Table management",
+                    "Staff management",
+                    "Inventory tracking",
+                    "Customer feedback system",
+                    "Mobile-responsive interface"
+                ],
+                images: ["#E5E7EB", "#F9FAFB", "#D1D5DB"],
+                nextId: 5,
+                prevId: 3
+            },
+            {
+                id: 5,
+                title: "E-Commerce Platform",
+                category: "E-Commerce",
+                filter: "ecommerce",
+                year: "2020",
+                role: "Full Stack Developer",
+                tools: "Next.js, Node.js, PostgreSQL, Prisma, Stripe",
+                link: "",
+                overview: "Modern e-commerce platform with advanced features including product recommendations, reviews, and multi-vendor support.",
+                problem: "Building a scalable e-commerce platform that could handle multiple vendors and provide personalized shopping experiences.",
+                solution: "Developed a multi-vendor e-commerce platform with Next.js frontend and Node.js backend. Implemented recommendation engine and review system.",
+                features: [
+                    "Multi-vendor marketplace",
+                    "Product recommendations",
+                    "Customer reviews and ratings",
+                    "Advanced search and filtering",
+                    "Multiple payment options",
+                    "Shipping integration",
+                    "Vendor dashboard",
+                    "Analytics and reporting"
+                ],
+                images: ["#1F2937", "#374151", "#4B5563"],
+                nextId: 0,
+                prevId: 4
+            }
+        ];
+
+        // === STATE ===
+        let currentProjectIndex = 0;
+        let currentFilter = 'all';
+        let currentTestimonial = 0;
+
+        // === INITIALIZATION ===
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            renderProjects();
+            initScrollAnimations();
+            initCustomCursor();
+            initTestimonialSlider();
+            
+            // Add smooth scroll to all nav links
+            document.querySelectorAll('.smooth-scroll').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').slice(1);
+                    smoothScrollTo(targetId);
+                });
+            });
+        });
+
+        // === SMOOTH SCROLL ===
+        function smoothScrollTo(targetId) {
+            const target = document.getElementById(targetId);
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                // Close mobile menu
+                document.getElementById('mobileMenu').classList.remove('open');
+            }
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+        }
+
+        // === PROJECTS ===
+        function renderProjects() {
+            const grid = document.getElementById('projectsGrid');
+            if (!grid) return;
+            
+            const filteredProjects = currentFilter === 'all' 
+                ? projects 
+                : projects.filter(p => p.filter === currentFilter);
+            
+            grid.innerHTML = filteredProjects.map((project, index) => `
+                <div class="project-card group cursor-pointer reveal" onclick="openProject(${project.id})">
+                    <div class="aspect-[4/5] bg-gray-100 relative overflow-hidden">
+                        <div class="project-image absolute inset-0 flex items-center justify-center transition-all duration-500" style="background: ${project.images[0]}">
+                            <span class="font-serif text-4xl text-gray-300">${String(project.id + 1).padStart(2, '0')}</span>
+                        </div>
+                        <div class="project-overlay absolute inset-0 bg-black text-white flex flex-col justify-end p-6 opacity-0 transition-opacity duration-300">
+                            <p class="font-mono text-xs mb-2">${project.category}</p>
+                            <h3 class="font-serif text-2xl">${project.title}</h3>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-between items-center">
+                        <p class="font-serif text-lg">${project.title}</p>
+                        <p class="font-mono text-xs text-gray-400">${project.year}</p>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Re-initialize scroll animations
+            setTimeout(() => {
+                initScrollAnimations();
+            }, 100);
+        }
+
+        function filterProjects(filter) {
+            currentFilter = filter;
+            
+            // Update button states
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.filter === filter) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            renderProjects();
+        }
+
+        // === PROJECT MODAL ===
+        function openProject(id) {
+            const project = projects.find(p => p.id === id);
+            if (!project) return;
+            
+            currentProjectIndex = id;
+            
+            const modal = document.getElementById('projectModal');
+            const content = document.getElementById('projectContent');
+            
+            content.innerHTML = `
+                <div class="mb-8 animate-fade-in-up">
+                    <p class="font-mono text-sm text-gray-400 mb-2">${project.category} · ${project.year}</p>
+                    <h1 class="font-serif text-4xl md:text-6xl mb-4">${project.title}</h1>
+                    <p class="font-mono text-sm">${project.role}</p>
+                    ${project.link ? `<a href="${project.link}" target="_blank" class="font-mono text-sm hover-underline inline-block mt-2">Visit Website →</a>` : ''}
+                </div>
+                
+                <div class="mb-12 animate-fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm font-mono">
+                        <div>
+                            <p class="text-gray-400 mb-2">Overview</p>
+                            <p class="text-gray-600">${project.overview}</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 mb-2">Problem</p>
+                            <p class="text-gray-600">${project.problem}</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 mb-2">Solution</p>
+                            <p class="text-gray-600">${project.solution}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-12 animate-fade-in-up" style="animation-delay: 0.2s;">
+                    <p class="font-mono text-sm text-gray-400 mb-4">Tools & Technologies</p>
+                    <p class="font-mono text-sm">${project.tools}</p>
+                </div>
+                
+                <div class="mb-12 animate-fade-in-up" style="animation-delay: 0.3s;">
+                    <p class="font-mono text-sm text-gray-400 mb-4">Key Features</p>
+                    <ul class="font-mono text-sm space-y-2">
+                        ${project.features.map(f => `<li class="flex items-start gap-2"><span class="mt-1">•</span><span>${f}</span></li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="space-y-4 animate-fade-in-up" style="animation-delay: 0.4s;">
+                    ${project.images.map((color, i) => `
+                        <div class="aspect-[16/9] flex items-center justify-center" style="background: ${color}">
+                            <span class="font-serif text-6xl text-gray-300">Visual ${i + 1}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            
+            // Re-initialize icons
+            setTimeout(() => {
+                lucide.createIcons();
+            }, 50);
+        }
+
+        function closeProject() {
+            const modal = document.getElementById('projectModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function nextProject() {
+            const current = projects.find(p => p.id === currentProjectIndex);
+            if (current) {
+                openProject(current.nextId);
+            }
+        }
+
+        function prevProject() {
+            const current = projects.find(p => p.id === currentProjectIndex);
+            if (current) {
+                openProject(current.prevId);
+            }
+        }
+
+        // === TESTIMONIAL SLIDER ===
+        function initTestimonialSlider() {
+            const slides = document.querySelectorAll('.testimonial-slide');
+            setInterval(() => {
+                nextTestimonial();
+            }, 5000);
+        }
+
+        function nextTestimonial() {
+            const slides = document.querySelectorAll('.testimonial-slide');
+            slides[currentTestimonial].classList.remove('active');
+            currentTestimonial = (currentTestimonial + 1) % slides.length;
+            slides[currentTestimonial].classList.add('active');
+        }
+
+        function prevTestimonial() {
+            const slides = document.querySelectorAll('.testimonial-slide');
+            slides[currentTestimonial].classList.remove('active');
+            currentTestimonial = (currentTestimonial - 1 + slides.length) % slides.length;
+            slides[currentTestimonial].classList.add('active');
+        }
+
+        // === RESUME DOWNLOAD ===
+        function downloadResume() {
+            // Create a temporary link element
+            const link = document.createElement('a');
+            link.href = '#'; // Placeholder - in a real scenario, this would be a PDF URL
+            link.download = 'Nadir_Bux_Fullstack_Developer_Resume.pdf';
+            
+            // Trigger download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Show a toast notification
+            const toast = document.createElement('div');
+            toast.className = 'fixed top-4 right-4 bg-black text-white px-4 py-2 font-mono text-sm z-50 animate-fade-in-up';
+            toast.textContent = 'Resume download started';
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+
+        // === FORM ===
+        function handleSubmit(e) {
+            e.preventDefault();
+            const form = document.getElementById('contactForm');
+            const success = document.getElementById('formSuccess');
+            
+            // Simulate form submission
+            form.classList.add('hidden');
+            success.classList.remove('hidden');
+            
+            // Reset after 3 seconds
+            setTimeout(() => {
+                form.reset();
+                form.classList.remove('hidden');
+                success.classList.add('hidden');
+            }, 3000);
+        }
+
+        // === SCROLL ANIMATIONS ===
+        function initScrollAnimations() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            reveals.forEach(el => observer.observe(el));
+        }
+
+        // === CUSTOM CURSOR ===
+        function initCustomCursor() {
+            const dot = document.querySelector('.cursor-dot');
+            const outline = document.querySelector('.cursor-outline');
+            
+            if (!dot || !outline) return;
+            
+            let mouseX = 0;
+            let mouseY = 0;
+            let outlineX = 0;
+            let outlineY = 0;
+            
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                
+                dot.style.left = mouseX + 'px';
+                dot.style.top = mouseY + 'px';
+            });
+            
+            function animateOutline() {
+                const distX = mouseX - outlineX;
+                const distY = mouseY - outlineY;
+                
+                outlineX += distX * 0.15;
+                outlineY += distY * 0.15;
+                
+                outline.style.left = outlineX + 'px';
+                outline.style.top = outlineY + 'px';
+                
+                requestAnimationFrame(animateOutline);
+            }
+            animateOutline();
+            
+            // Hover effects
+            const hoverElements = document.querySelectorAll('a, button, .project-card, .filter-btn');
+            hoverElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    outline.classList.add('hover');
+                });
+                el.addEventListener('mouseleave', () => {
+                    outline.classList.remove('hover');
+                });
+            });
+        }
+
+        // === SMOOTH SCROLL INIT ===
+        document.querySelectorAll('.smooth-scroll').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').slice(1);
+                smoothScrollTo(targetId);
+            });
+        });
+
+        // === HASH ROUTING ===
+        window.addEventListener('hashchange', () => {
+            const hash = window.location.hash.slice(1);
+            if (hash && document.getElementById(hash)) {
+                smoothScrollTo(hash);
+            }
+        });
+
+        // Handle initial hash
+        if (window.location.hash) {
+            const hash = window.location.hash.slice(1);
+            setTimeout(() => {
+                smoothScrollTo(hash);
+            }, 100);
+        }
+    </script>
+</body>
+</html>
