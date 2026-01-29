@@ -1,19 +1,22 @@
-import React, { useState } from "react"
-import portfolio from "~/json/portfolio.json"
-import { Button } from "../ui/AppButton"
-import SocialMedia from "../ui/SocialMedia"
+import { useState } from "react"
+import portfolioJson from "~/json/portfolio.json"
 
-interface Props {}
+const SOCIAL_LINKS = [
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/nadir-bakhsh-39807413a/" },
+  { name: "GitHub", url: "https://github.com/NadirBakhsh" },
+  { name: "Upwork", url: "#" },
+  { name: "Behance", url: "#" },
+]
 
-function ContactSection(props: Props) {
-  const { ContactSection } = portfolio
-  const { title1, title2, describe, name, phone } = ContactSection
+export default function ContactSection() {
+  const { ContactSection: data } = portfolioJson
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
   })
+  const [submitted, setSubmitted] = useState(false)
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -22,125 +25,155 @@ function ContactSection(props: Props) {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    setSubmitted(true)
+    setFormData({ name: "", email: "", phone: "", message: "" })
+    setTimeout(() => setSubmitted(false), 3000)
+  }
+
   return (
-    <div id="contact" className="Contact h-auto bg-white pb-40">
-      <div className="container mx-auto relative flex flex-col md:flex-row gap-10 md:gap-32">
-        {/* Contact Form */}
-        <div className="max-w-[500px] mt-10 flex-1 px-5">
-          <form className="space-y-6">
-            <div className="relative">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="peer block h-12 w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-primary-neutral"
-                placeholder=" "
-              />
-              <label
-                htmlFor="name"
-                className={`absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left ${
-                  formData.name
-                    ? "-translate-y-3 scale-75 text-primary-neutral"
-                    : "peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
-                }`}
+    <section
+      id="contact"
+      className="py-20 px-6 md:px-12 lg:px-20 scroll-mt-20"
+    >
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div>
+            <h2 className="font-serif text-4xl md:text-5xl mb-6">
+              Get In Touch
+            </h2>
+            <p className="text-gray-600 leading-relaxed mb-8">
+              Let&apos;s talk Idea
+              <br />
+              build Something special
+              <br />
+              I seek to push the limits of creativity to create high-engaging,
+              user-friendly, and memorable interactive experiences.
+            </p>
+
+            <div className="space-y-4 font-mono text-sm mb-12">
+              <p className="font-serif text-lg">{data.name}</p>
+              <a
+                href={`tel:${data.phone.replace(/\s/g, "")}`}
+                className="block hover-underline"
               >
-                Your name
-              </label>
+                {data.phone}
+              </a>
+              <p className="text-gray-400">Karachi, Pakistan</p>
             </div>
-            <div className="relative">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="peer block h-12 w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-primary-neutral"
-                placeholder=" "
-              />
-              <label
-                htmlFor="email"
-                className={`absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left ${
-                  formData.email
-                    ? "-translate-y-3 scale-75 text-primary-neutral"
-                    : "peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
-                }`}
-              >
-                Email
-              </label>
-            </div>
-            <div className="relative">
-              <input
-                type="text"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                className="peer block h-12 w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-primary-neutral"
-                placeholder=" "
-              />
-              <label
-                htmlFor="phone"
-                className={`absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left ${
-                  formData.phone
-                    ? "-translate-y-3 scale-75 text-primary-neutral"
-                    : "peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
-                }`}
-              >
-                Phone Number {`(Optional)`}
-              </label>
-            </div>
-            <div className="relative">
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={4}
-                className="peer block w-full px-3 py-2 text-sm text-primary-neutral border border-black rounded-md bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-neutral focus:border-primary-neutral"
-                placeholder=" "
-              ></textarea>
-              <label
-                htmlFor="message"
-                className={`absolute left-3 -top-0 py-[2px] px-2 bg-white text-zinc-500 text-sm transition-all duration-200 transform scale-100 origin-left ${
-                  formData.message
-                    ? "-translate-y-3 scale-75 text-primary-neutral"
-                    : "peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary-neutral"
-                }`}
-              >
-                Message
-              </label>
-            </div>
-            <div className="flex flex-col md:flex-row gap-[8px]">
-              <Button size="md" className="max-w-[136px] text-sm ">
-                Get In Touch
-              </Button>
-              <div className="flex gap-2 mt-3 md:mt-0">
-                <SocialMedia size="sm" />
+
+            <div className="border-t border-gray-200 pt-8">
+              <h3 className="font-serif text-2xl mb-4">Follow</h3>
+              <div className="flex gap-6">
+                {SOCIAL_LINKS.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.url}
+                    target={link.url.startsWith("http") ? "_blank" : undefined}
+                    rel={
+                      link.url.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
+                    className="hover-underline font-mono text-sm"
+                  >
+                    {link.name}
+                  </a>
+                ))}
               </div>
             </div>
-          </form>
-        </div>
+          </div>
 
-        <div className="flex-1 mt-10 max-w-[600px] px-5">
-          <h2 className="text-3xl md:text-5xl  text-black font-extrabold">
-            {title1}
-          </h2>
-          <h2 className="text-3xl md:text-4xl mt-2 md:mt-3 text-black font-extrabold">
-            {title2}
-          </h2>
-          <p className="text-base text-zinc-500 mt-5 ">{describe}</p>
-          <h2 className=" text-2xl md:text-3xl  text-black font-semibold mt-6">
-            {name}
-          </h2>
-          <h2 className="text-2xl md:text-3xl  text-black font-semibold mt-2">
-            {phone}
-          </h2>
+          <div>
+            {submitted ? (
+              <div className="mt-6 p-4 border border-black bg-black text-white text-center font-mono text-sm">
+                Thank you! I&apos;ll get back to you soon.
+              </div>
+            ) : (
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
+                <div>
+                  <label
+                    htmlFor="contact-name"
+                    className="block font-mono text-xs mb-2"
+                  >
+                    Your name
+                  </label>
+                  <input
+                    id="contact-name"
+                    type="text"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full p-4 border border-gray-200 font-mono text-sm bg-transparent hover:border-black focus:border-black focus:outline-none transition-colors"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="contact-email"
+                    className="block font-mono text-xs mb-2"
+                  >
+                    Email
+                  </label>
+                  <input
+                    id="contact-email"
+                    type="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full p-4 border border-gray-200 font-mono text-sm bg-transparent hover:border-black focus:border-black focus:outline-none transition-colors"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="contact-phone"
+                    className="block font-mono text-xs mb-2"
+                  >
+                    Phone Number (Optional)
+                  </label>
+                  <input
+                    id="contact-phone"
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full p-4 border border-gray-200 font-mono text-sm bg-transparent hover:border-black focus:border-black focus:outline-none transition-colors"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="contact-message"
+                    className="block font-mono text-xs mb-2"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    rows={5}
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Tell me about your project..."
+                    className="w-full p-4 border border-gray-200 font-mono text-sm bg-transparent hover:border-black focus:border-black focus:outline-none transition-colors resize-none"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full font-mono text-sm px-8 py-4 border border-black hover-invert"
+                >
+                  Send Message
+                </button>
+              </form>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
-
-export default ContactSection

@@ -1,44 +1,115 @@
-import portfolioJson from "~/json/portfolio.json"
-import { Icons } from "../icon"
+import { useEffect, useRef } from "react"
 
-interface Props {}
+const SKILL_CATEGORIES = [
+  {
+    title: "Languages",
+    skills: ["JavaScript", "TypeScript", "Python", "HTML5", "CSS3"],
+  },
+  {
+    title: "Frontend Framwork",
+    skills: ["Next.js", "Remix", "React Native", "Expo", "Tailwindcss", "Angular"],
+  },
+  {
+    title: "Backend",
+    skills: ["Node.js", "Express", "Nest.js", "REST APIs", "Web Services"],
+  },
+  {
+    title: "Database",
+    skills: ["MongoDB", "MySQL", "PostgreSQL", "Firebase", "neoundb", "supbase"],
+  },
+  {
+    title: "Tools",
+    skills: ["Git", "Docker", "VS Code", "Figma", "Cursor AI IDE", "Postman", "npm", "AWS"],
+  },
+  {
+    title: "Libraries",
+    skills: [
+      "React",
+      "Redux",
+      "Axios",
+      "Socket.io",
+      "JWT",
+      "Lodash",
+      "Shadcn",
+      "Ant Design",
+      "untitled UI",
+    ],
+  },
+  {
+    title: "Methodologies",
+    skills: ["Agile", "Scrum", "CI/CD", "Code Review"],
+  },
+]
 
-function SkillSection(props: Props) {
-  const {} = props
+function SkillCard({
+  title,
+  skills,
+  className,
+}: {
+  title: string
+  skills: string[]
+  className?: string
+}) {
+  const ref = useRef<HTMLDivElement>(null)
 
-  const {
-    SkillSection: { title, skills }
-  } = portfolioJson
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("active")
+        })
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
 
   return (
-    <div id="skills" className="skills h-auto bg-white w-full py-10  mt-16 px-5">
-      <div className="container mx-auto flex flex-col items-center mt-10">
-        <h2 className="text-5xl text-center">
-          {" "}
-          My <span className="font-extrabold">{title}</span>
-        </h2>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 gap-6 md:gap-10 my-12">
-          {skills.map((item) => {
-            const SkillIcon = Icons[item.icon as keyof typeof Icons]
-
-            return (
-              <div
-                key={item.name}
-                className="h-[160px] p-4 group cursor-pointer flex-col md:h-[186px] text-black hover:text-white hover:bg-black text-xl font-semibold w-[161px] md:w-[186px] border-2 border-black rounded-md flex items-center justify-center "
-              >
-                <div className="relative flex w-14 h-14  items-center justify-center">
-                  <SkillIcon className="w-14 h-14" />
-                </div>
-                <p className="mt-4">{item.name}</p>
-              </div>
-            )
-          })}
+    <div ref={ref} className={`reveal ${className ?? ""}`}>
+      <div className="p-6 border border-gray-200 hover:border-black transition-colors h-full">
+        <h3 className="font-serif text-xl mb-4">{title}</h3>
+        <div className="flex flex-wrap gap-2">
+          {skills.map((skill) => (
+            <span
+              key={skill}
+              className="font-mono text-xs px-3 py-1 border border-gray-200 hover:bg-black hover:text-white transition-colors cursor-default"
+            >
+              {skill}
+            </span>
+          ))}
         </div>
       </div>
     </div>
   )
 }
 
-export default SkillSection
+export default function SkillSection() {
+  return (
+    <section
+      id="skills"
+      className="py-20 px-6 md:px-12 lg:px-20 border-b border-gray-200 scroll-mt-20"
+    >
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-16">
+          <h2 className="font-serif text-4xl md:text-5xl mb-4">My Skills</h2>
+          <p className="font-mono text-sm text-gray-500">
+            Technologies & Tools · 7+ Years Experience
+          </p>
+        </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {SKILL_CATEGORIES.map((cat) => (
+            <SkillCard
+              key={cat.title}
+              title={cat.title}
+              skills={cat.skills}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

@@ -11,7 +11,10 @@ import styles from "./styles/tailwind.css?url";
 
 export const links: LinksFunction = () => [
 	{ rel: "stylesheet", href: styles },
-  { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" }
+	{
+		rel: "stylesheet",
+		href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap",
+	},
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -23,7 +26,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="font-sora">
+      <body className="font-sans bg-white text-black antialiased scroll-smooth">
         {children}
         <ScrollRestoration />
         <Scripts />

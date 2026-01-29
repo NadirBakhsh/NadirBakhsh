@@ -1,24 +1,14 @@
-import React from 'react'
-
-interface Props {}
-
-function Footer(props: Props) {
-  const {} = props
-
+export default function Footer() {
   return (
-    <div className="footer py-6 w-full bg-black">
-      <div className="container mx-auto bg-black text-white items-center  flex justify-between">
-        <div>
-          <h1 className="text-2xl italic flex font-sans font-semibold space-x-3">
-            Nadir.B
-          </h1>
-        </div>
-        <div className="text-right font-md text-md">
-          <p>&copy; 2025 Nadir.B, All Rights Reserved</p>
-        </div>
+    <footer className="border-t border-gray-200 py-8 px-6 md:px-12 lg:px-20">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <p className="font-mono text-xs text-gray-400">
+          © 2025 Nadir.B, All Rights Reserved.
+        </p>
+        <p className="font-mono text-xs text-gray-400">
+          Built with precision and care.
+        </p>
       </div>
-    </div>
+    </footer>
   )
 }
-
-export default Footer

@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -27,7 +28,7 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem
+    --radius: 0.5rem;
   }
   .dark {
     --background: 240 10% 3.9%;
@@ -53,9 +54,10 @@
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%
+    --chart-5: 340 75% 55%;
   }
 }
+
 @layer base {
   * {
     @apply border-border;
@@ -63,18 +65,84 @@
   body {
     @apply bg-background text-foreground;
   }
-
+  ::selection {
+    @apply bg-black text-white;
+  }
   .link {
     @apply hover:text-primary-neutral hover:underline cursor-pointer underline-offset-1;
   }
-
   .social-media-link {
     @apply h-16 w-16 border-black border-2 rounded-md flex items-center justify-center hover:bg-black hover:text-white;
   }
-
   .social-media-link-sm {
     @apply h-[56px] w-[56px] border-black border-2 rounded-md flex items-center justify-center hover:bg-black hover:text-white;
   }
+}
 
+/* Portfolio redesign utilities */
+.hover-underline {
+  @apply relative;
+}
+.hover-underline::after {
+  content: '';
+  @apply absolute bottom-[-2px] left-0 w-0 h-px bg-black transition-[width] duration-300 ease-out;
+}
+.hover-underline:hover::after {
+  @apply w-full;
+}
+.hover-invert {
+  @apply transition-all duration-300 ease-out;
+}
+.hover-invert:hover {
+  @apply bg-black text-white;
+}
+.hover-invert-white {
+  @apply transition-all duration-300 ease-out;
+}
+.hover-invert-white:hover {
+  @apply bg-white text-black border-white;
+}
+.nav-link {
+  @apply relative;
+}
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-[-4px] left-0 w-0 h-0.5 bg-black transition-[width] duration-300 ease-out;
+}
+.nav-link:hover::after {
+  @apply w-full;
+}
+.reveal {
+  @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+}
+.reveal.active {
+  @apply opacity-100 translate-y-0;
+}
+.marquee-container {
+  @apply overflow-hidden;
+}
+.marquee-content {
+  @apply flex animate-marquee;
+}
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+.project-card:hover .project-overlay {
+  @apply opacity-100;
+}
+.project-card:hover .project-image {
+  filter: grayscale(100%) brightness(0.3);
+}
+.mobile-menu {
+  @apply translate-x-full transition-transform duration-300 ease-out;
+}
+.mobile-menu.open {
+  @apply translate-x-0;
+}
+.filter-btn.active {
+  @apply underline underline-offset-4;
+}
+.status-badge {
+  @apply animate-pulse-slow;
 }
 

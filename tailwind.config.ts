@@ -16,7 +16,32 @@ export default {
 					'Segoe UI Symbol',
 					'Noto Color Emoji',
 				],
-				sora: ['Sora', 'sans-serif'],
+				serif: ['Playfair Display', 'Georgia', 'serif'],
+				mono: ['Space Mono', 'ui-monospace', 'monospace'],
+			},
+			animation: {
+				'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+				'slide-in-right': 'slideInRight 0.6s ease-out forwards',
+				'pulse-slow': 'pulse 2s ease-in-out infinite',
+				marquee: 'marquee 20s linear infinite',
+			},
+			keyframes: {
+				fadeInUp: {
+					'0%': { opacity: '0', transform: 'translateY(30px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' },
+				},
+				slideInRight: {
+					'0%': { opacity: '0', transform: 'translateX(20px)' },
+					'100%': { opacity: '1', transform: 'translateX(0)' },
+				},
+				marquee: {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-50%)' },
+				},
+				pulse: {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' },
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

@@ -1,71 +1,111 @@
-import { useState, useEffect } from "react"
-import { Icons } from "../icon"
-import Logo from "../ui/Logo"
-import MenuList from "../ui/MenuList"
-import ResumeButton from "../ui/ResumeButton"
+import { useState } from "react"
+import { Menu } from "lucide-react"
 
-interface Props {}
+const navLinks = [
+  { name: "Home", href: "#hero" },
+  { name: "About Me", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Experience", href: "#experience" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+]
 
-function Header(props: Props) {
-  const [asideOpen, setAsideOpen] = useState(false)
-  const [isHeaderVisible, setIsHeaderVisible] = useState(true)
-
-  const handleAsideOpen = () => {
-    setAsideOpen(!asideOpen)
+function scrollToSection(href: string) {
+  const id = href.slice(1)
+  const el = document.getElementById(id)
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start" })
   }
+}
 
-  useEffect(() => {
-    if (!asideOpen) {
-      const handleScroll = () => {
-        const currentScrollPosition = window.scrollY
-        setIsHeaderVisible(
-          currentScrollPosition < 10 ||
-            currentScrollPosition < previousScrollPosition
-        )
-        previousScrollPosition = currentScrollPosition
-      }
+export default function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false)
 
-      let previousScrollPosition = 0
-      window.addEventListener("scroll", handleScroll)
-      return () => {
-        window.removeEventListener("scroll", handleScroll)
-      }
-    }
-  }, [asideOpen])
+  const handleNavClick = (href: string) => {
+    scrollToSection(href)
+    setMobileOpen(false)
+  }
 
   return (
     <>
-      <header
-        className={`md:flex hidden w-full items-center h-[84px] border-primary-neutral border-b  sticky top-0 z-50 bg-white transition-transform duration-300 ${
-          isHeaderVisible ? "translate-y-0" : "-translate-y-full "
-        }`}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+          <a
+            href="#hero"
+            onClick={(e) => {
+              e.preventDefault()
+              handleNavClick("#hero")
+            }}
+            className="font-serif text-xl font-medium hover-underline"
+          >
+            Nadir.B
+          </a>
+
+          <div className="hidden md:flex items-center gap-8 font-mono text-sm">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={(e) => {
+                  e.preventDefault()
+                  handleNavClick(link.href)
+                }}
+                className="nav-link"
+              >
+                {link.name}
+              </a>
+            ))}
+            <a
+              href="/cv/Nadir-Bakhsh-CV.pdf"
+              download="Nadir-Bakhsh-CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-link"
+            >
+              Resume
+            </a>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden p-2 hover:bg-gray-100 rounded"
+            aria-label="Toggle menu"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
+        </div>
+      </nav>
+
+      <div
+        id="mobileMenu"
+        className={`mobile-menu fixed top-0 right-0 h-full w-64 bg-white z-40 border-l border-gray-200 pt-20 px-6 ${mobileOpen ? "open" : ""}`}
       >
-        <nav className="w-full flex items-center justify-between @container container mx-auto">
-          <Logo />
-          <MenuList />
-          <ResumeButton />
-        </nav>
-      </header>
-      <header
-        className={`md:hidden px-5 flex w-full justify-between  items-center h-[64px] border-primary-neutral border-b sticky top-0 z-50 bg-white transition-transform duration-300 ${
-          isHeaderVisible ? "translate-y-0" : "-translate-y-full"
-        }`}
-      >
-        <Logo />
-        <span onClick={handleAsideOpen} className="cursor-pointer">
-          <Icons.Hamburger />
-        </span>
-      </header>
-      <aside
-        className={`fixed md:hidden h-screen w-1/2 md:w-1/5 pt-[84px] md:pt-[104px] bg-white top-0 right-0 z-40 px-5 shadow-lg transform transition-transform duration-300 ${
-          asideOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <ResumeButton />
-        <MenuList />
-      </aside>
+        <div className="flex flex-col gap-6 font-mono text-lg">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={(e) => {
+                e.preventDefault()
+                handleNavClick(link.href)
+              }}
+              className="hover-underline"
+            >
+              {link.name}
+            </a>
+          ))}
+          <a
+            href="/cv/Nadir-Bakhsh-CV.pdf"
+            download="Nadir-Bakhsh-CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover-underline"
+          >
+            Resume
+          </a>
+        </div>
+      </div>
     </>
   )
 }
-
-export default Header

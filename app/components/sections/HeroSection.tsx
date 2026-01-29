@@ -1,50 +1,94 @@
-import SocialMedia from "../ui/SocialMedia"
+import portfolioJson from "~/json/portfolio.json"
 
-interface Props {}
+const HERO_IMAGE =
+  "https://www.dropbox.com/scl/fi/gg209n47ii6ehbb00esi7/hero.png?rlkey=ikk1d3pkkfxjgk74vxryrvgby&st=1ti4j5k2&dl=1"
 
-function HeroSection(props: Props) {
-  const {} = props
-
-  return (
-    <div id="home" className="w-full relative mt-5 h-auto px-5">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between	 relative ">
-        <div />
-        <div className="md:absolute w-full md:w-1/2 order-3 mt-12 md:mt-0">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl flex flex-col space-y-2 md:space-y-4 tracking-tighter">
-            <div>
-              Hello I’m{" "}
-              <span className="text-black font-extrabold">Nadir Bux</span>
-            </div>
-            <div>
-              <span className="text-black  font-extrabold">
-                Fullstack Developer
-              </span>
-            </div>
-            <div>
-              Open to <span className="text-black font-extrabold">Work</span>
-            </div>
-          </h1>
-          <p className="md:max-w-[580px] text-base mt-8 leading-6 text-zinc-500">
-            Hi, I’m Nadir Bux, a passionate Fullstack development and
-            specializing in Frontend development with responsive design, and
-            user-friendly web and Apps. With a strong background in{" "}
-            <strong>React, Remix, Next.js, Tailwind CSS</strong> and modern{" "}
-            <strong>JavaScript libraries</strong>, please feel free to{" "}
-            <i>connect with me and discuss your project.</i>
-          </p>
-        </div>
-
-        <img
-          alt="hero-laptop-image"
-          src="./asset/hero-laptop-image.svg"
-          className="md:w-8/12 -translate-x-[10%] md:translate-x-0"
-        />
-        <div className="order-last md:absolute bottom-0 w-full  flex space-x-4 md:space-x-8 z-10 translate-y-8 ">
-          <SocialMedia />
-        </div>
-      </div>
-    </div>
-  )
+function scrollToSection(id: string) {
+  const el = document.getElementById(id)
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" })
 }
 
-export default HeroSection
+export default function HeroSection() {
+  const { HeroSection: hero } = portfolioJson
+
+  return (
+    <section
+      id="hero"
+      className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 border-b border-gray-200 relative overflow-hidden scroll-mt-20"
+    >
+      <div className="absolute inset-0 z-0">
+        <img
+          src={HERO_IMAGE}
+          alt="Nadir Bakhsh - Fullstack Developer"
+          className="w-full h-full object-cover grayscale"
+          onError={(e) => {
+            const target = e.currentTarget
+            target.style.display = "none"
+            const parent = target.parentElement
+            if (parent) {
+              const fallback = document.createElement("div")
+              fallback.className = "w-full h-full bg-gradient-to-br from-gray-100 to-gray-300"
+              parent.appendChild(fallback)
+            }
+          }}
+        />
+      </div>
+
+      <div className="max-w-5xl relative z-10">
+        <p
+          className="font-mono text-sm md:text-base mb-4 animate-fade-in-up"
+          style={{ animationDelay: "0.1s" }}
+        >
+          <span className="status-badge inline-block w-2 h-2 bg-black rounded-full mr-2" />
+          {hero.catchy}
+        </p>
+        <h1
+          className="font-serif text-5xl md:text-7xl lg:text-8xl font-medium leading-tight animate-fade-in-up"
+          style={{ animationDelay: "0.2s" }}
+        >
+          {hero.wellcom}
+          <br />
+          {hero.name}
+        </h1>
+        <p
+          className="font-serif text-3xl md:text-5xl lg:text-6xl text-gray-400 mt-2 animate-fade-in-up"
+          style={{ animationDelay: "0.3s" }}
+        >
+          {hero.role}
+        </p>
+        <p
+          className="font-mono text-sm md:text-base mt-8 max-w-xl text-gray-500 animate-fade-in-up"
+          style={{ animationDelay: "0.4s" }}
+        >
+          {hero.description}
+        </p>
+        <div
+          className="mt-12 flex flex-wrap gap-4 animate-fade-in-up"
+          style={{ animationDelay: "0.5s" }}
+        >
+          <button
+            type="button"
+            onClick={() => scrollToSection("projects")}
+            className="font-mono text-sm px-8 py-4 border border-black hover-invert"
+          >
+            View Projects
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollToSection("contact")}
+            className="font-mono text-sm px-8 py-4 border border-gray-300 hover-invert-white"
+          >
+            Get In Touch
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollToSection("about")}
+            className="font-mono text-sm px-8 py-4 border border-gray-300 hover-invert-white"
+          >
+            About Me
+          </button>
+        </div>
+      </div>
+    </section>
+  )
+}

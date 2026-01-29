@@ -135,22 +135,36 @@
     "title": "Experience",
     "experiences": [
       {
-        "company": "Now Posh - IT Department",
+        "company": "Progressive Solution",
         "type": "Full Time",
         "country": "Pakistan",
-        "role": "Senior Software Engineer",
-        "duration": "Jan 2024 - Present",
-        "describe": "At Now Posh, I worked as a Full Stack Developer and Team Lead, overseeing both frontend and backend development. I led a team of developers, maintained code quality, and optimized workflows for efficient project execution. My role involved building scalable web applications, implementing secure authentication, and integrating RESTful APIs for smooth data exchange. Leveraging React.js, Next.js, and Node.js, I developed high-performance, user-friendly interfaces. Additionally, I conducted code reviews and mentorship sessions, fostering a strong development culture. My contributions enhanced project efficiency, improved application reliability, and accelerated delivery timelines",
-        "logoUrl": "./companies-logo/posh_logo.png"
+        "role": "Full Stack Developer",
+        "duration": "2024 - Present",
+        "describe": "At Progressive Solution, I work as a Full Stack Developer.",
+        "bullets": [
+          "Integrated multiple third-party APIs, notably Stripe for secure payments.",
+          "Actively participated in daily stand-ups and agile sprint planning.",
+          "Refactored existing features to meet evolving requirements.",
+          "Developed clean, efficient code per product specifications.",
+          "Collaborated with QA team to ensure high-quality software delivery."
+        ],
+        "logoUrl": "./companies-logo/progressive_solution_pakistan_logo.jpg",
+        "companyUrl": "https://progressivesolution.pk/"
       },
       {
         "company": "Designocracy",
         "type": "Full Time",
         "country": "Pakistan",
-        "role": "Full Stack Engineer",
+        "role": "Senior Frontend Developer",
         "duration": "Jan 2021 - Nov 2024",
-        "describe": "At Designocracy, I began as a Frontend UI Developer, focusing on creating responsive and user-friendly interfaces while integrating APIs to enhance functionality. My expertise in React.js, Next.js, and modern UI frameworks contributed to streamlined development and improved user experience. Recognizing my contributions, I was promoted to Full Stack Engineer, where I collaborated with backend teams to design REST API data schemas and integrate them into the frontend. Over time, I played a key role in optimizing performance, ensuring scalability, and maintaining high code standards. Later, I advanced to a Part-Time Full Stack Engineer, continuing to build scalable web solutions while mentoring junior developers and conducting code reviews to enhance overall project quality.",
-        "logoUrl": "./companies-logo/designocracy_logo.jpg"
+        "describe": "At Designocracy, I delivered high-performance React and Next.js applications.",
+        "bullets": [
+          "Delivered high-performance React and Next.js applications with pixel-perfect UI.",
+          "Integrated complex APIs using Axios, React Query, and Redux.",
+          "Awarded \"Best Performance\" 3 times in a row for consistent on-time delivery."
+        ],
+        "logoUrl": "./companies-logo/designocracy_logo.jpg",
+        "companyUrl": "https://thedesignocracy.com/"
       },
       {
         "company": "Upwork",
@@ -158,32 +172,78 @@
         "country": "Pakistan",
         "role": "Frontend Engineer",
         "duration": "Jan 2019 - Present",
-        "describe": " work as a part-time freelancer on Upwork, specializing in frontend development with a strong focus on React.js, Next.js, and modern UI frameworks. I have successfully delivered multiple projects with top ratings, ensuring high-quality, scalable, and user-friendly applications. My expertise includes crafting responsive interfaces, optimizing performance, and implementing secure API integrations for seamless user experiences. By following best coding practices, I ensure clean, maintainable, and efficient code. I also contribute to development workflows through code reviews and mentorship. My dedication to client satisfaction and attention to detail help me deliver reliable and high-performing solutions.",
-        "logoUrl": "./companies-logo/upwork_logo.jpg"
+        "describe": "Part-time freelancer on Upwork, specializing in frontend development.",
+        "bullets": [
+          "Delivered multiple projects with top ratings; high-quality, scalable applications.",
+          "Crafting responsive interfaces and implementing secure API integrations.",
+          "Code reviews and mentorship; clean, maintainable code and client satisfaction."
+        ],
+        "logoUrl": "./companies-logo/upwork_logo.jpg",
+        "companyUrl": "https://www.upwork.com/freelancers/~0190205ca30e620f2b?viewMode=1"
       },
       {
-        "company": "Pikky",
+        "company": "Pikky - USA",
         "country": "USA",
         "type": "Full Time",
-        "role": "Frontend Engineer",
+        "role": "Senior Frontend Developer - Remote",
         "duration": "Jan 2023 - Nov 2024",
-        "describe": "For Pikky, I developed both the Restaurant Dashboard and the Mobile Application, ensuring a seamless experience for restaurant owners and customers. The Restaurant Dashboard was built using React.js, providing intuitive order management, analytics, and real-time updates. The Mobile App, developed with React Native, offered a user-friendly interface for placing orders, tracking deliveries, and making secure payments. I implemented authentication and API integrations, ensuring data security and smooth communication between the frontend and backend. Leading code reviews, I maintained high coding standards and optimized performance. Additionally, I mentored junior developers, improving team efficiency and overall project quality.",
-        "logoUrl": "./companies-logo/pikky_logo.jpg"
+        "describe": "Developed Restaurant Dashboard and Mobile Application for Pikky.",
+        "bullets": [
+          "Developed both the Restaurant Dashboard and the Mobile Application.",
+          "Restaurant Dashboard built with React.js; Mobile App with React Native.",
+          "Facilitated optimized performance, maintained standards."
+        ],
+        "logoUrl": "./companies-logo/pikky_logo.jpg",
+        "companyUrl": "https://pikky.io/"
       },
       {
         "company": "Expertizo",
         "type": "Full Time",
         "country": "Pakistan",
-        "role": "Full-stack Developer",
+        "role": "Full Stack Developer",
         "duration": "Feb 2020 - Jan 2021",
-        "describe": "I developed and maintained scalable React applications, ensuring high performance and efficiency. My role involved implementing robust authentication mechanisms to enhance security. I integrated various APIs seamlessly, optimizing data flow and user experience. Leading code reviews, I provided constructive feedback to improve code quality. I also mentored junior developers, fostering a culture of continuous learning. These efforts streamlined development workflows and boosted overall team productivity.",
-        "logoUrl": "./companies-logo/expertizo_logo.jpg"
+        "describe": "Developed and maintained scalable React applications at Expertizo.",
+        "bullets": [
+          "Collaborated closely with designers and system analysts.",
+          "Integrated various APIs, optimizing data flow and user experience.",
+          "Implemented comprehensive unit tests for active projects."
+        ],
+        "logoUrl": "./companies-logo/expertizo_logo.jpg",
+        "companyUrl": "https://www.expertizo.pk/"
       }
     ]
   },
 
   "AboutSection": {
     "title": "About",
+    "education": [
+      {
+        "degree": "BS, Computer Science",
+        "years": "2018 - 2021",
+        "institution": "Virtual University of Pakistan"
+      },
+      {
+        "degree": "FSC Degree in Pre-Engineering",
+        "years": "2014 - 2016",
+        "institution": "Govt. Superior s/c College, Street No. 2, Block 2, Shah Faisal Colony, Karachi."
+      },
+      {
+        "degree": "Matriculation in Science",
+        "years": "2010 - 2012",
+        "institution": "Ataturk Public Scholl, Block 13, Gulistan-e-Jouhar, Karachi."
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Nest.js Masterclass – Backend (Jan to Nov - 2025)",
+        "description": "Nest JS with Node and Type-Script to build REST APIs Backend with Type-ORM PostgreSQL, MongoDB, testing, AWS deployment.",
+        "url": "https://www.udemy.com/certificate/UC-57ce86c8-bf71-441a-aef8-b8a85d400d5d/"
+      },
+      {
+        "title": "MERN Stack - Mobile & Web (2020 - 2021)",
+        "description": "SMIT Center Welfare Trust 2018."
+      }
+    ],
     "bio": [
       {
         "title": "Who I Am",
@@ -199,7 +259,7 @@
       },
       {
         "title": "Achievements and Aspirations",
-        "describe": "I have received three time “Best Employee of the Month” awards at Designocracy, and At Posh I was promoted to Team Lead just two months after joining. My portfolio showcases successful projects like Mahaba, Aldi US Dashboard, and Pikky.io. In the future, My aim to continue advancing the fields of web and mobile development, adopting upcoming technologies, and providing outstanding digital solutions."
+        "describe": "I have received three time “Best Employee of the Month” awards at Designocracy, and At Progressive Services I was promoted to Team Lead just two months after joining. My portfolio showcases successful projects like Mahaba, Aldi US Dashboard, and Pikky.io. In the future, My aim to continue advancing the fields of web and mobile development, adopting upcoming technologies, and providing outstanding digital solutions."
       }
     ]
   },
