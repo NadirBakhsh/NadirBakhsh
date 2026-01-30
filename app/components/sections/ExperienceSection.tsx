@@ -19,37 +19,53 @@ function ExperienceSection(props: Props) {
 
         {experiences
           .reverse()
-          .map(
-            (
-              { company, type, country, role, duration, describe, logoUrl },
-              i
-            ) => (
+          .map((experience, i) => {
+            const { company, country, role, duration, responsibilities, logoUrl } = experience
+            const describe = "describe" in experience ? (experience as { describe?: string }).describe : undefined
+            return (
               <div
                 key={i}
                 className="text-white border-2 border-zinc-500 rounded-lg p-6  hover:bg-zinc-800 mb-8"
               >
-                <div className="card-hear flex flex-col md:flex-row justify-between md:items-end">
-                  <div className="space-x-4 font-semibold flex  md:items-end">
-                    <span className="w-12 h-12 p-1 bg-white shrink-0 grow-0 ">
-                      <img src={logoUrl} alt={company} />
+                <div className="card-header flex flex-col">
+         
+                  <div className="space-x-4 font-semibold flex items-end">
+                    <span className="w-12 h-12 p-1 bg-white shrink-0 grow-0 rounded overflow-hidden">
+                      <img src={logoUrl} alt={company} className="w-full h-full object-contain" />
                     </span>
                     <span>
-                      <span className="text-xl">{company}</span>
+                      <div>
+
+                      <span className="text-xl">
+                        {company}
+                        {country ? ` - ${country}` : ""}
+                      </span>
+                      <span className="text-base text-zinc-400 ml-2 font-medium">
+                    ({duration})
+                  </span>
+                      </div>
                       <p className="!font-light text-sm text-zinc-300">
                         {role}
                       </p>
                     </span>
                   </div>
-                  <span className="text-base mt-[30px] md:mt-0">
-                    {duration}
-                  </span>
                 </div>
-                <p className="text-base mt-4 !font-light text-zinc-400">
-                  {describe}
-                </p>
+                {responsibilities && responsibilities.length > 0 ? (
+                  <ul className="text-sm mt-4 !font-light text-zinc-400 list-disc list-inside space-y-1">
+                    {responsibilities.map((item: string, j: number) => (
+                      <li key={j}>{item}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  describe && (
+                    <p className="text-base mt-4 !font-light text-zinc-400">
+                      {describe}
+                    </p>
+                  )
+                )}
               </div>
             )
-          )}
+          })}
       </div>
     </div>
   )
