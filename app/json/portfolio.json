@@ -203,12 +203,40 @@
         "describe": " crafting high quality of web & APPs using JavaScript frameworks such as Next.js and React, along with backend solutions powered by Node.js and Nest.js. My skills also include working with databases like MongoDB, MySQL, PostgreSQL and Firebase. This ensures the solutions I develop are both resilient and scalable. Additionally, I have a strong proficiency in UI/UX design, utilizing frameworks like Tailwind CSS, Material-UI, and Ant Design to create interfaces."
       },
       {
-        "title": "My Education and Experience",
-        "describe": "completed high school education at Ataturk Public School and intermediate studies at Superior Science College. further enhanced my technical skills by  IT Diploma from SMIT, where I excelled with a top 10 result, reflecting my strong dedication to learning in the field of technology."
+        "title": "Education",
+        "education": [
+          {
+            "duration": "2018 - 2021",
+            "degree": "BS, Computer Science",
+            "institution": "Virtual University of Pakistan"
+          },
+          {
+            "duration": "2014 - 2016",
+            "degree": "FSC Degree in Pre-Engineering",
+            "institution": "Govt. Superior s/c College, Street No. 2, Block 2, Shah Faisal Colony, Karachi."
+          },
+          {
+            "duration": "2010 - 2012",
+            "degree": "Matriculation in Science",
+            "institution": "Ataturk Public School, Block 13, Gulistan-e-Jouhar, Karachi."
+          }
+        ]
       },
       {
-        "title": "Achievements and Aspirations",
-        "describe": "I have received three time “Best Employee of the Month” awards at Designocracy, and At Posh I was promoted to Team Lead just two months after joining. My portfolio showcases successful projects like Mahaba, Aldi US Dashboard, and Pikky.io. In the future, My aim to continue advancing the fields of web and mobile development, adopting upcoming technologies, and providing outstanding digital solutions."
+        "title": "Certifications",
+        "certifications": [
+          {
+            "name": "Nest.js Masterclass - Backend",
+            "duration": "Jan to Nov - 2025",
+            "describe": "Nest JS with Node and Type-Script to build REST APIs Backend with Type-ORM PostgreSQL, MongoDB, testing, AWS deployment.",
+            "certificateUrl": "https://www.udemy.com/certificate/UC-57ce86c8-bf71-441a-aef8-b8a85d400d5d/"
+          },
+          {
+            "name": "MERN Stack - Mobile & Web",
+            "duration": "2020 - 2021",
+            "describe": "SMIT Center Welfare Trust 2018."
+          }
+        ]
       }
     ]
   },

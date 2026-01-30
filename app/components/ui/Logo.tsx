@@ -6,7 +6,7 @@ interface Props {}
 function Logo(props: Props) {
   const {} = props
   return (
-    <h1 className="text-2xl italic flex font-sans font-semibold space-x-3">
+    <h1 className="text-2xl  flex font-sans font-bold space-x-3">
       <Link to="#home" className="text-primary-neutral">
       Nadir.B
       </Link>
