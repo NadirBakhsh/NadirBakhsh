@@ -1,49 +1,64 @@
+import portfolio from "~/json/portfolio.json"
 import SocialMedia from "../ui/SocialMedia"
+import { Button } from "../ui/AppButton"
 
 interface Props {}
 
 function HeroSection(props: Props) {
   const {} = props
+  const {
+    HeroSection: { wellcom, name, role, catchy, description }
+  } = portfolio
 
   return (
-    <div id="home" className="w-full relative mt-5 h-[calc(100vh-64px)] md:h-[calc(100vh-84px)] px-5 pb-0">
-      {/* <div className="container mx-auto flex flex-col md:flex-row items-center justify-between	 relative ">
-        <div />
-        <div className="md:absolute w-full md:w-1/2 order-3 mt-12 md:mt-0">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl flex flex-col space-y-2 md:space-y-4 tracking-tighter">
-            <div>
-              Hello I’m{" "}
-              <span className="text-black font-extrabold">Nadir Bux</span>
-            </div>
-            <div>
-              <span className="text-black  font-extrabold">
-                Fullstack Developer
-              </span>
-            </div>
-            <div>
-              Open to <span className="text-black font-extrabold">Work</span>
-            </div>
-          </h1>
-          <p className="md:max-w-[580px] text-base mt-8 leading-6 text-zinc-500">
-            Hi, I’m Nadir Bux, a passionate Fullstack development and
-            specializing in Frontend development with responsive design, and
-            user-friendly web and Apps. With a strong background in{" "}
-            <strong>React, Remix, Next.js, Tailwind CSS</strong> and modern{" "}
-            <strong>JavaScript libraries</strong>, please feel free to{" "}
-            <i>connect with me and discuss your project.</i>
-          </p>
-        </div>
-
-      </div> */}
-
+    <div
+      id="home"
+      className="relative mt-5 h-[calc(100vh-64px)] w-full px-5 pb-0 md:h-[calc(100vh-84px)]"
+    >
       <img
         alt="hero-laptop-image"
         src="./asset/hero-nadir-image.png"
-        className="object-contain w-full h-full object-right -translate-y-5 z-10 border-b absolute top-0 left-0 right-0 bottom-0"
+        className="absolute bottom-0 left-0 right-0 top-0 z-0 h-full w-full -translate-y-5 object-contain object-right border-b"
       />
-        <div className="absolute bottom-20 right-12 z-10 flex flex-col  space-y-4">
-          <SocialMedia />
+
+      <div className="container relative z-20 mx-auto flex h-full items-center">
+        <div className="max-w-[640px]">
+          <span className="inline-flex items-center gap-2 rounded-full border border-black/20 bg-white/80 px-3 py-1 text-xs font-semibold tracking-wide text-zinc-700 md:text-sm">
+            <span className="h-2 w-2 rounded-full bg-green-600" />
+            {catchy}
+          </span>
+
+          <h1 className="mt-4 text-3xl font-semibold leading-tight tracking-tight text-zinc-900 md:text-5xl lg:text-6xl">
+            {wellcom} <span className="font-extrabold">{name}</span>
+          </h1>
+
+          <h2 className="mt-2 text-2xl font-bold text-zinc-700 md:text-4xl">{role}</h2>
+
+          <p className="mt-6 max-w-[600px] text-sm leading-7 text-zinc-600 md:text-base">{description}</p>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a href="#projects">
+              <Button size="sm">View Projects</Button>
+            </a>
+            <a href="#contact">
+              <Button
+                size="sm"
+                className="border-black bg-white text-black hover:bg-black hover:text-white"
+              >
+                Get In Touch
+              </Button>
+            </a>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-3 md:hidden">
+            <SocialMedia size="sm" />
+          </div>
         </div>
+      </div>
+
+      <div className="absolute bottom-20 right-12 z-20 hidden flex-col space-y-4 md:flex">
+        <SocialMedia />
+      </div>
     </div>
   )
 }
