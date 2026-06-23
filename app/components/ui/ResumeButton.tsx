@@ -8,7 +8,7 @@ function ResumeButton(props: Props) {
   const {} = props
   return (
     <a
-      href="../../../cv/Nadir-Bakhsh-CV.pdf"
+      href="../../../cv/Nadir-Bakhsh-CV-2026.pdf"
       className="w-full md:w-auto"
       download="Nadir-Bakhsh-CV.pdf"
       target="_blank"
