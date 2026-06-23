@@ -17,9 +17,7 @@ function ExperienceSection(props: Props) {
           My <span className="font-extrabold">{title}</span>
         </h2>
 
-        {experiences
-          .reverse()
-          .map((experience, i) => {
+        {experiences.map((experience, i) => {
             const { company, country, role, duration, responsibilities, logoUrl } = experience
             const describe = "describe" in experience ? (experience as { describe?: string }).describe : undefined
             return (
